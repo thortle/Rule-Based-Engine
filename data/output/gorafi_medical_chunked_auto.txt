@@ -1,0 +1,27 @@
+===== CHUNKING STATISTICS =====
+
+Total chunks: 273
+Unknown chunks: 0
+Categorization rate: 100.0%
+
+===== CATEGORY DISTRIBUTION =====
+
+SN: 99 (36.3%)
+SP: 59 (21.6%)
+SV: 20 (7.3%)
+PctNF: 20 (7.3%)
+PctF: 19 (7.0%)
+Quote: 16 (5.9%)
+Coord: 9 (3.3%)
+SujV: 9 (3.3%)
+SAdj: 7 (2.6%)
+CSub: 7 (2.6%)
+SAdv: 4 (1.5%)
+TimeExpr: 1 (0.4%)
+P: 1 (0.4%)
+ParO: 1 (0.4%)
+ParF: 1 (0.4%)
+
+===== CHUNKED TEXT =====
+
+[TimeExpr] Il est 18h30 [SN] ce lundi [SN] 27 janvier [SN] quand Jean-Noël [SN] C [PctF] . [SV] est [SV] admis [SP] en urgences [SP] à l'hôpital [SN] Rangueil de Toulouse [SP] pour une crise [SN] d'appendicite aiguë [PctF] . [SN] Une opération [SAdj] bénigne [CSub] que [SN] le docteur [SN] Moulin [Coord] et [SN] son équipe [SN] mènent d'une [SN] main de maître [SP] avant [SP] de laisser [SN] Jean-Noël finalement [SV] rentrer [SP] chez [SujV] lui [SP] après 2 [SN] jours de repos [PctF] . [Coord] Mais [SP] à peine [SP] de retour [SP] à son [SN] domicile [PctNF] , [SN] ce dernier [SN] ressent alors [SP] de violentes [SN] contractions [PctF] . [Quote] " [SujV] Il avait [CSub] comme [SN] une gène [SP] dans le bas-ventre [PctF] . [SN] Une grosse [SN] gêne [PctF] ! [Quote] " [SV] se rappelle [SN] Emma [PctNF] , [SN] sa femme [PctF] . [Quote] " [SN] Faut dire [SN] qu'il avait [SN] pris 75 [SN] kilos [SP] en 2 [SN] jours [PctF] . [SN] Ce n'est [SAdv] quand même [SAdj] pas banal [Quote] " [SV] poursuit-elle [SP] en étendant [SN] le linge [PctF] . [Quote] " [Coord] Mais [SujV] je crois [CSub] que [SN] ce qui [SV] m'a vraiment mis [SN] la puce [SP] à l'oreille [PctNF] , [SN] c'est lorsque [SujV] je [SujV] me suis [SV] mis [SP] à jouer [SN] le dernier [SN] album de Vianney [SP] sur les enceintes [SP] du salon [Coord] et [CSub] que [SN] j'ai entendu [SN] la voix [SN] d'un homme [SP] à l'intérieur [SP] de mon mari [SujV] me demander [SP] de couper [SN] le son [Quote] " [SV] conclut-elle [PctNF] , [SAdj] horrifiée [PctF] . [SP] De retour [SP] aux urgences [PctNF] , [SN] les médecins [SV] sont [SAdv] complètement [SP] sous le choc [PctF] . [SN] Une radio [SV] effectuée [SP] à la hâte [SN] révèle l'impensable [PctF] : [SN] Titouan [PctNF] , [SN] stagiaire de 1ère [SN] année [SP] en chirurgie [PctNF] , [SN] a bel [Coord] et [SN] bien été [SV] oublié [SP] à l'intérieur [SP] de Jean-Noël [PctF] . [Quote] " [SN] C'est vraiment [SN] la faute [SAdj] bête [Quote] " [SujV] nous confie [SN] le docteur [SN] Moulin [SV] en se frappant [SN] le front [PctF] . [Quote] " [SN] J'avais déjà [SV] oublié [SN] des objets [SP] dans des patients [CSub] comme [SN] des compresses [SP] ou des gants [SAdv] alors [SN] un stagiaire [SN] ça allait [SN] bien finir [SP] par arriver [Quote] " [SV] poursuit-il [PctNF] , [SP] avant d'ajouter [PctF] : [Quote] " [SN] Enfin bon [PctNF] , [SAdv] tout [SV] est [SN] bien qui [SN] finit bien [Coord] et [SN] maintenant qu'il [SN] a été [SN] enfermé 48 [SN] heures [SP] à l'intérieur [SN] d'un patient [PctNF] , [SujV] on peut [SV] dire [CSub] que [SN] Titouan a [SN] vraiment mérité [SN] son statut [SP] d'interne [Quote] " [PctF] . [SN] Des faits [SN] graves qui [SN] ont poussé [SN] Jean-Noël [SP] à porter [SN] plainte [SP] contre l'hôpital [SP] pour [Quote] " [SN] mise en danger [SP] de la vie [SP] d'autrui [Quote] " [Coord] et [Quote] " [SN] contact prolongé [SP] avec un stagiaire [Quote] " [PctF] . [SN] Graves [Coord] mais [SAdj] pas rares [SP] puisqu'une étude [SV] menée [SP] par l'Université [SN] Marie Curie [SP] de Brest [SV] révèle [SN] une augmentation [SP] de [P] près de [SN] 18 % [SN] d'objets oubliés [SP] dans des patients [SP] en 2024 [PctF] . [SujV] On [SV] se souvient [SP] par exemple [SP] du cas [SP] de Lucile [SN] Bongrain qui [PctNF] , [SP] en juin [SAdj] dernier [PctNF] , [SN] avait dû [SV] retourner [SP] à l'hôpital [SP] après [CSub] que [SN] son chirurgien [SN] a oublié [SN] un porte-clé [PctNF] , [SN] un scalpel [PctNF] , [SN] une quille [PctNF] , [SN] 8 sacs [SP] de chaux [PctNF] , [SN] l'intégrale de Magnum [SP] en Blu [SN] Ray [PctNF] , [SN] 3 pots [SP] de pesto [PctNF] , [SN] une luge [PctNF] , [SN] un jeu [SN] La bonne [SN] paye [ParO] ( [SAdj] d'occasion [ParF] ) [PctNF] , [SN] 6 livres [SP] de Katherine [SN] Pancol [Coord] et [SN] un demi-kilo [SP] de morilles [SP] à l'intérieur [SP] de sa cuisse [PctF] . 

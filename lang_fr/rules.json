@@ -1,0 +1,4930 @@
+[
+  {
+    "pattern_description": "SN: couleurs qu'il porte toujours",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "couleurs"
+        },
+        {
+          "type": "lookup",
+          "value": "qu'"
+        },
+        {
+          "type": "lookup",
+          "value": "il"
+        },
+        {
+          "type": "lookup",
+          "value": "porte"
+        },
+        {
+          "type": "lookup",
+          "value": "toujours"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Jean-Noël C.",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Jean-Noël"
+        },
+        {
+          "type": "lookup",
+          "value": "C"
+        },
+        {
+          "type": "lookup",
+          "value": "."
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: d'une main de maître",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lookup",
+          "value": "une"
+        },
+        {
+          "type": "lookup",
+          "value": "main"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "maître"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: crise d'appendicite aiguë",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "crise"
+        },
+        {
+          "type": "lookup",
+          "value": "d'appendicite"
+        },
+        {
+          "type": "lookup",
+          "value": "aiguë"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: contact prolongé",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "contact"
+        },
+        {
+          "type": "lookup",
+          "value": "prolongé"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: mise en danger",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "mise"
+        },
+        {
+          "type": "lookup",
+          "value": "en"
+        },
+        {
+          "type": "lookup",
+          "value": "danger"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: quand même",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "quand"
+        },
+        {
+          "type": "lookup",
+          "value": "même"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Phrase: C'est officiel",
+    "category": "Phrase",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "C'est"
+        },
+        {
+          "type": "lookup",
+          "value": "officiel"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "TimeExpr: Il est 18h30",
+    "category": "TimeExpr",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Il"
+        },
+        {
+          "type": "lookup",
+          "value": "est"
+        },
+        {
+          "type": "lookup",
+          "value": "18h30"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujVAdj: Ce n'est pas banal",
+    "category": "SujVAdj",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Ce"
+        },
+        {
+          "type": "lookup",
+          "value": "n'est"
+        },
+        {
+          "type": "lookup",
+          "value": "pas"
+        },
+        {
+          "type": "lookup",
+          "value": "banal"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: m'a vraiment mis",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "m'a"
+        },
+        {
+          "type": "lookup",
+          "value": "vraiment"
+        },
+        {
+          "type": "lookup",
+          "value": "mis"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Liga Portugal Betclic",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Liga"
+        },
+        {
+          "type": "lookup",
+          "value": "Portugal"
+        },
+        {
+          "type": "lookup",
+          "value": "Betclic"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Ajax Amsterdam",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Ajax"
+        },
+        {
+          "type": "lookup",
+          "value": "Amsterdam"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: AS Roma",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "AS"
+        },
+        {
+          "type": "lookup",
+          "value": "Roma"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: RB Leipzig",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "RB"
+        },
+        {
+          "type": "lookup",
+          "value": "Leipzig"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: OGC Nice",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "OGC"
+        },
+        {
+          "type": "lookup",
+          "value": "Nice"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Valence CF",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Valence"
+        },
+        {
+          "type": "lookup",
+          "value": "CF"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: AFC Bournemouth",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "AFC"
+        },
+        {
+          "type": "lookup",
+          "value": "Bournemouth"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: FC Barcelone",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "FC"
+        },
+        {
+          "type": "lookup",
+          "value": "Barcelone"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: BBC One",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "BBC"
+        },
+        {
+          "type": "lookup",
+          "value": "One"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "CS: puisque",
+    "category": "CS",
+    "pattern": {
+      "type": "lookup",
+      "value": "puisque"
+    }
+  },
+  {
+    "pattern_description": "Pro: celui",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "celui"
+    }
+  },
+  {
+    "pattern_description": "CS: si",
+    "category": "CS",
+    "pattern": {
+      "type": "lookup",
+      "value": "si"
+    }
+  },
+  {
+    "pattern_description": "P: devant",
+    "category": "P",
+    "pattern": {
+      "type": "lookup",
+      "value": "devant"
+    }
+  },
+  {
+    "pattern_description": "Pro_Rel: qu'",
+    "category": "Pro_Rel",
+    "pattern": {
+      "type": "lookup",
+      "value": "qu'"
+    }
+  },
+  {
+    "pattern_description": "SV: me a vraiment mis",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "me"
+        },
+        {
+          "type": "lookup",
+          "value": "a"
+        },
+        {
+          "type": "lookup",
+          "value": "vraiment"
+        },
+        {
+          "type": "lookup",
+          "value": "mis"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: couleurs qu'",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "couleurs"
+        },
+        {
+          "type": "lookup",
+          "value": "qu'"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: prêt",
+    "category": "SN",
+    "pattern": {
+      "type": "lookup",
+      "value": "prêt"
+    }
+  },
+  {
+    "pattern_description": "PctNF: –",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": "–"
+    }
+  },
+  {
+    "pattern_description": "Interj: ?",
+    "category": "Interj",
+    "pattern": {
+      "type": "lookup",
+      "value": "?"
+    }
+  },
+  {
+    "pattern_description": "SV: se rappelle",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "se"
+        },
+        {
+          "type": "lookup",
+          "value": "rappelle"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: se souvient",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "se"
+        },
+        {
+          "type": "lookup",
+          "value": "souvient"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: avant d'ajouter",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "avant"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lookup",
+          "value": "ajouter"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: d'appendicite",
+    "category": "SN",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'appendicite"
+    }
+  },
+  {
+    "pattern_description": "SN: d'une",
+    "category": "SN",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'une"
+    }
+  },
+  {
+    "pattern_description": "SN: l'impensable",
+    "category": "SN",
+    "pattern": {
+      "type": "lookup",
+      "value": "l'impensable"
+    }
+  },
+  {
+    "pattern_description": "SN: L'UEFA",
+    "category": "SN",
+    "pattern": {
+      "type": "lookup",
+      "value": "L'UEFA"
+    }
+  },
+  {
+    "pattern_description": "SV: Garder",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "Garder"
+    }
+  },
+  {
+    "pattern_description": "SAdv: bel et bien",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "bel"
+        },
+        {
+          "type": "lookup",
+          "value": "et"
+        },
+        {
+          "type": "lookup",
+          "value": "bien"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: La Ligue des champions",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "La"
+        },
+        {
+          "type": "lookup",
+          "value": "Ligue"
+        },
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "champions"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: en Ligue des champions",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "en"
+        },
+        {
+          "type": "lookup",
+          "value": "Ligue"
+        },
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "champions"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: des Coupes d'Europe",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "Coupes"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lookup",
+          "value": "Europe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: la Coupe d'Europe",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "Coupe"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lookup",
+          "value": "Europe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: d'Europe",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lookup",
+          "value": "Europe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: par feu Patrice Laffont",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "par"
+        },
+        {
+          "type": "lookup",
+          "value": "feu"
+        },
+        {
+          "type": "lookup",
+          "value": "Patrice"
+        },
+        {
+          "type": "lookup",
+          "value": "Laffont"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: un club européen riche",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "un"
+        },
+        {
+          "type": "lookup",
+          "value": "club"
+        },
+        {
+          "type": "lookup",
+          "value": "européen"
+        },
+        {
+          "type": "lookup",
+          "value": "riche"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: par feu Patrice Laffont",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "par"
+        },
+        {
+          "type": "lookup",
+          "value": "feu"
+        },
+        {
+          "type": "lookup",
+          "value": "Patrice"
+        },
+        {
+          "type": "lookup",
+          "value": "Laffont"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: un club européen riche",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "un"
+        },
+        {
+          "type": "lookup",
+          "value": "club"
+        },
+        {
+          "type": "lookup",
+          "value": "européen"
+        },
+        {
+          "type": "lookup",
+          "value": "riche"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: une main de maître",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "une"
+        },
+        {
+          "type": "lookup",
+          "value": "main"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "maître"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Det:la + Adj:nouvelle + N:compétition",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "compétition"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Det:la + Adj:nouvelle + N:formule",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "formule"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:par + N:feu + N_Prop:Patrice + N_Prop:Laffont",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "par"
+        },
+        {
+          "type": "lookup",
+          "value": "feu"
+        },
+        {
+          "type": "lookup",
+          "value": "Patrice"
+        },
+        {
+          "type": "lookup",
+          "value": "Laffont"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + N_Prop:Pierre + P:de + N_Prop:Maere",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Pierre"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Maere"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Quote_O:« + Det:Les + N:clubs + Adj:français",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "«"
+        },
+        {
+          "type": "lookup",
+          "value": "Les"
+        },
+        {
+          "type": "lookup",
+          "value": "clubs"
+        },
+        {
+          "type": "lookup",
+          "value": "français"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS:ils + Neg:ne + Mod_V:pourront + Neg:pas",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "ils"
+        },
+        {
+          "type": "lookup",
+          "value": "ne"
+        },
+        {
+          "type": "lookup",
+          "value": "pourront"
+        },
+        {
+          "type": "lookup",
+          "value": "pas"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:selon + Det:les + Adj:mêmes + N:règles",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "selon"
+        },
+        {
+          "type": "lookup",
+          "value": "les"
+        },
+        {
+          "type": "lookup",
+          "value": "mêmes"
+        },
+        {
+          "type": "lookup",
+          "value": "règles"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:un + N:club + Adj:européen + Adj:riche",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "un"
+        },
+        {
+          "type": "lookup",
+          "value": "club"
+        },
+        {
+          "type": "lookup",
+          "value": "européen"
+        },
+        {
+          "type": "lookup",
+          "value": "riche"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: des clubs européens",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "clubs"
+        },
+        {
+          "type": "lookup",
+          "value": "européens"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: du premier septembre",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "du"
+        },
+        {
+          "type": "lookup",
+          "value": "premier"
+        },
+        {
+          "type": "lookup",
+          "value": "septembre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de Jean Castex",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Jean"
+        },
+        {
+          "type": "lookup",
+          "value": "Castex"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: la nouvelle organisation",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "organisation"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de Gennaro Gattuso",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Gennaro"
+        },
+        {
+          "type": "lookup",
+          "value": "Gattuso"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: les supporters marseillais",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "les"
+        },
+        {
+          "type": "lookup",
+          "value": "supporters"
+        },
+        {
+          "type": "lookup",
+          "value": "marseillais"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de l'entraîneur italien",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "l'entraîneur"
+        },
+        {
+          "type": "lookup",
+          "value": "italien"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujV: il était parti",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "il"
+        },
+        {
+          "type": "lookup",
+          "value": "était"
+        },
+        {
+          "type": "lookup",
+          "value": "parti"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de Jean Castex",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Jean"
+        },
+        {
+          "type": "lookup",
+          "value": "Castex"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de Gennaro Gattuso",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Gennaro"
+        },
+        {
+          "type": "lookup",
+          "value": "Gattuso"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P: près de",
+    "category": "P",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "près"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujV: ProS + Neg + V + Neg",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujV: ProS + Neg + Aux + Neg",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujV: ProS + Neg + Mod + Neg",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "CSub: CS + PPS + Neg + ModV + Neg",
+    "category": "CSub",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "CS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod_V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdj: Neg + Adj",
+    "category": "SAdj",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: les supporters marseillais",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "les"
+        },
+        {
+          "type": "lookup",
+          "value": "supporters"
+        },
+        {
+          "type": "lookup",
+          "value": "marseillais"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: de l'entraîneur italien",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "l'entraîneur"
+        },
+        {
+          "type": "lookup",
+          "value": "italien"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SujV: il était parti",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "il"
+        },
+        {
+          "type": "lookup",
+          "value": "était"
+        },
+        {
+          "type": "lookup",
+          "value": "parti"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: la nouvelle formule",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "formule"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: comme une gêne",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "comme"
+        },
+        {
+          "type": "lookup",
+          "value": "une"
+        },
+        {
+          "type": "lookup",
+          "value": "gêne"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: bébé parfaitement viable",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "bébé"
+        },
+        {
+          "type": "lookup",
+          "value": "parfaitement"
+        },
+        {
+          "type": "lookup",
+          "value": "viable"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: bébé parfaitement viable",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "bébé"
+        },
+        {
+          "type": "lookup",
+          "value": "parfaitement"
+        },
+        {
+          "type": "lookup",
+          "value": "viable"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:la + Adj:nouvelle + N:formule",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "formule"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:la + Adv:plus + Adj:célèbre",
+    "category": "SAdj",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "plus"
+        },
+        {
+          "type": "lookup",
+          "value": "célèbre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Neg:ne + V:débuterait(Cond) + Neg:pas",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "ne"
+        },
+        {
+          "type": "lookup",
+          "value": "débuterait"
+        },
+        {
+          "type": "lookup",
+          "value": "pas"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:la + Adj:nouvelle + N:formule",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "formule"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:des + N:clubs + Adj:européens",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "clubs"
+        },
+        {
+          "type": "lookup",
+          "value": "européens"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Num:six + N:mois",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "six"
+        },
+        {
+          "type": "lookup",
+          "value": "mois"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:du + Adj:premier + N:septembre",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "du"
+        },
+        {
+          "type": "lookup",
+          "value": "premier"
+        },
+        {
+          "type": "lookup",
+          "value": "septembre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:toutes + Det:les + N:règles",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "toutes"
+        },
+        {
+          "type": "lookup",
+          "value": "les"
+        },
+        {
+          "type": "lookup",
+          "value": "règles"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:à + Det:des + N:cours",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "à"
+        },
+        {
+          "type": "lookup",
+          "value": "des"
+        },
+        {
+          "type": "lookup",
+          "value": "cours"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Det:cette + N:formation",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "cette"
+        },
+        {
+          "type": "lookup",
+          "value": "formation"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + N_Prop:Jean + N_Prop:Castex",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Jean"
+        },
+        {
+          "type": "lookup",
+          "value": "Castex"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:la + Adj:nouvelle + N:organisation",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "nouvelle"
+        },
+        {
+          "type": "lookup",
+          "value": "organisation"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Quote_O:« + P:De + Adv:même",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "«"
+        },
+        {
+          "type": "lookup",
+          "value": "De"
+        },
+        {
+          "type": "lookup",
+          "value": "même"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Neg:ne + V:changera(Fut) + Neg:pas",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "ne"
+        },
+        {
+          "type": "lookup",
+          "value": "changera"
+        },
+        {
+          "type": "lookup",
+          "value": "pas"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Det:la + N_Prop:Coupe",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "Coupe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS:Cela + Neg:n' + Mod:est + Neg:pas",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Cela"
+        },
+        {
+          "type": "lookup",
+          "value": "n'est"
+        },
+        {
+          "type": "lookup",
+          "value": "pas"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + N_Prop:Gennaro + N_Prop:Gattuso",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "Gennaro"
+        },
+        {
+          "type": "lookup",
+          "value": "Gattuso"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:les + N:supporters + Adj:marseillais",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "les"
+        },
+        {
+          "type": "lookup",
+          "value": "supporters"
+        },
+        {
+          "type": "lookup",
+          "value": "marseillais"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:de + Det:l' + N:entraîneur + Adj:italien",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "l'entraîneur"
+        },
+        {
+          "type": "lookup",
+          "value": "italien"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS:il + Aux:était + Vpart:parti",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "il"
+        },
+        {
+          "type": "lookup",
+          "value": "était"
+        },
+        {
+          "type": "lookup",
+          "value": "parti"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:dans + Det:la + N:foulée",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "dans"
+        },
+        {
+          "type": "lookup",
+          "value": "la"
+        },
+        {
+          "type": "lookup",
+          "value": "foulée"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Adv_Loc:tout à fait",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "tout"
+        },
+        {
+          "type": "lookup",
+          "value": "à"
+        },
+        {
+          "type": "lookup",
+          "value": "fait"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: opération bénigne",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "opération"
+        },
+        {
+          "type": "lookup",
+          "value": "bénigne"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: de comprendre",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "comprendre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SP: en septembre",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "en"
+        },
+        {
+          "type": "lookup",
+          "value": "septembre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: de comprendre",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lookup",
+          "value": "comprendre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: à partir",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "à"
+        },
+        {
+          "type": "lookup",
+          "value": "partir"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: se rendre",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "se"
+        },
+        {
+          "type": "lookup",
+          "value": "rendre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: l'émission Pyramide",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "l'émission"
+        },
+        {
+          "type": "lookup",
+          "value": "Pyramide"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: leur apparaisse",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "leur"
+        },
+        {
+          "type": "lookup",
+          "value": "apparaisse"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Aleksander Čeferin",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Aleksander"
+        },
+        {
+          "type": "lookup",
+          "value": "Čeferin"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: s'est toutefois",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "s'est"
+        },
+        {
+          "type": "lookup",
+          "value": "toutefois"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: voulu rassurant",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "voulu"
+        },
+        {
+          "type": "lookup",
+          "value": "rassurant"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: comme d'habitude",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "comme"
+        },
+        {
+          "type": "lookup",
+          "value": "d'habitude"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: c'est simplement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "c'est"
+        },
+        {
+          "type": "lookup",
+          "value": "simplement"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: sera toujours",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "sera"
+        },
+        {
+          "type": "lookup",
+          "value": "toujours"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: L'année dernière",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "L'année"
+        },
+        {
+          "type": "lookup",
+          "value": "dernière"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: à comprendre",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "à"
+        },
+        {
+          "type": "lookup",
+          "value": "comprendre"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: Aleksander Čeferin",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "Aleksander"
+        },
+        {
+          "type": "lookup",
+          "value": "Čeferin"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN: l'émission Pyramide",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "l'émission"
+        },
+        {
+          "type": "lookup",
+          "value": "Pyramide"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: comme d'habitude",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "comme"
+        },
+        {
+          "type": "lookup",
+          "value": "d'habitude"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: s'est toutefois",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "s'est"
+        },
+        {
+          "type": "lookup",
+          "value": "toutefois"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: L'année dernière",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "L'année"
+        },
+        {
+          "type": "lookup",
+          "value": "dernière"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: sera toujours",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "sera"
+        },
+        {
+          "type": "lookup",
+          "value": "toujours"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: leur apparaisse",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "leur"
+        },
+        {
+          "type": "lookup",
+          "value": "apparaisse"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV: voulu rassurant",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "voulu"
+        },
+        {
+          "type": "lookup",
+          "value": "rassurant"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv: c'est simplement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "c'est"
+        },
+        {
+          "type": "lookup",
+          "value": "simplement"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:d' + N_Prop:Europe",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "d'Europe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:d' + Vinf:ajouter",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "d'ajouter"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:l' + N:esprit",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "l'esprit"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P:d' + N_Prop:Europe",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "d'Europe"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det:l' + N:aventure",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "l'aventure"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + SN -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P(en) + Pref + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "en"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Pref"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(d') + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Num -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Num"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + SN -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(d') + SN -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "N + P(d') + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(de) + SN -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + SP -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "category",
+          "value": "SP"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + Adj + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N + Adj -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Num + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Num"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + N_Prop -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N_Prop -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + Adj + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N + Adj -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + Aux + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Aux + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Mod_V + Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Mod_V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vinf"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vinf"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + V -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + Mod -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + Aux -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + V -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + Mod -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + Aux -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + Adj + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + N + Adj -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Num + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Num"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + N_Prop -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N_Prop -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + Adj + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Det + N + Adj -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(de) + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(d') + N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "d'"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SN + P(de) + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SN"
+        },
+        {
+          "type": "lookup",
+          "value": "de"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P(en) + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lookup",
+          "value": "en"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV + SAdv -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SV"
+        },
+        {
+          "type": "category",
+          "value": "SAdv"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SAdv + SV -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SAdv"
+        },
+        {
+          "type": "category",
+          "value": "SV"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + SN -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Aux + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Mod_V + Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Mod_V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vinf"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vinf"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + V -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + Mod -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "PPS + Aux -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "PPS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + V -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + Mod -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "ProS + Aux -> SujV",
+    "category": "SujV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "ProS"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Det + SN -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Det"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + SN -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "N + Adj -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "N + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "N_Prop + N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N_Prop"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Num + N -> SP",
+    "category": "SP",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Num"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "N"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "V + Adv -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adv"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Adv + V -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Adv"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Neg + V + Neg -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Neg + Aux + Neg -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Aux"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Neg + Mod_V + Neg -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Mod_V"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Neg"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "P + Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "P"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vpart"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Pref + Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Pref"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Vinf"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Adv + Adj -> SAdj",
+    "category": "SAdj",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "lexicon_category",
+          "key": "Adv"
+        },
+        {
+          "type": "lexicon_category",
+          "key": "Adj"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "Mod:est -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "est"
+    }
+  },
+  {
+    "pattern_description": "Aux:a -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "a"
+    }
+  },
+  {
+    "pattern_description": "Mod:sont -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "sont"
+    }
+  },
+  {
+    "pattern_description": "Aux:ont -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "ont"
+    }
+  },
+  {
+    "pattern_description": "Aux:avait -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "avait"
+    }
+  },
+  {
+    "pattern_description": "Aux:était -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "était"
+    }
+  },
+  {
+    "pattern_description": "Aux:suis -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "suis"
+    }
+  },
+  {
+    "pattern_description": "Mod_V:devront -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "devront"
+    }
+  },
+  {
+    "pattern_description": "Mod:sera -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "sera"
+    }
+  },
+  {
+    "pattern_description": "Mod:seront -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lookup",
+      "value": "seront"
+    }
+  },
+  {
+    "pattern_description": "SAdv: simplement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "simplement"
+    }
+  },
+  {
+    "pattern_description": "SAdv: toujours",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "toujours"
+    }
+  },
+  {
+    "pattern_description": "SAdv: toutefois",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "toutefois"
+    }
+  },
+  {
+    "pattern_description": "Pro_Compl: leur",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "leur"
+    }
+  },
+  {
+    "pattern_description": "SP: d'objets",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'objets"
+    }
+  },
+  {
+    "pattern_description": "SP: d'interne",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'interne"
+    }
+  },
+  {
+    "pattern_description": "SP: d'autrui",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'autrui"
+    }
+  },
+  {
+    "pattern_description": "CS:que",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "que"
+    }
+  },
+  {
+    "pattern_description": "Adv:initialement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "initialement"
+    }
+  },
+  {
+    "pattern_description": "CC:mais",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "mais"
+    }
+  },
+  {
+    "pattern_description": "CC:et",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "et"
+    }
+  },
+  {
+    "pattern_description": "CC:et",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "et"
+    }
+  },
+  {
+    "pattern_description": "Adv:quotidiennement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "quotidiennement"
+    }
+  },
+  {
+    "pattern_description": "CC:et",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "et"
+    }
+  },
+  {
+    "pattern_description": "Adv:notamment",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "notamment"
+    }
+  },
+  {
+    "pattern_description": "CC:mais",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "mais"
+    }
+  },
+  {
+    "pattern_description": "Adv:aussi",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "aussi"
+    }
+  },
+  {
+    "pattern_description": "CC:et",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "et"
+    }
+  },
+  {
+    "pattern_description": "CS:qu'",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "qu'"
+    }
+  },
+  {
+    "pattern_description": "Adv_Loc:tout à fait",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "tout à fait"
+    }
+  },
+  {
+    "pattern_description": "Adv:Puis",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "Puis"
+    }
+  },
+  {
+    "pattern_description": "CC:et",
+    "category": "Coord",
+    "pattern": {
+      "type": "lookup",
+      "value": "et"
+    }
+  },
+  {
+    "pattern_description": "Interj:Hélas",
+    "category": "Interj",
+    "pattern": {
+      "type": "lookup",
+      "value": "Hélas"
+    }
+  },
+  {
+    "pattern_description": "CS:qu'ils",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "qu'ils"
+    }
+  },
+  {
+    "pattern_description": "Neg:ne",
+    "category": "Neg",
+    "pattern": {
+      "type": "lookup",
+      "value": "ne"
+    }
+  },
+  {
+    "pattern_description": "Neg:pas",
+    "category": "Neg",
+    "pattern": {
+      "type": "lookup",
+      "value": "pas"
+    }
+  },
+  {
+    "pattern_description": "P: de",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "de"
+    }
+  },
+  {
+    "pattern_description": "P: à",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "à"
+    }
+  },
+  {
+    "pattern_description": "P: en",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "en"
+    }
+  },
+  {
+    "pattern_description": "P: pour",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "pour"
+    }
+  },
+  {
+    "pattern_description": "P: avant",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "avant"
+    }
+  },
+  {
+    "pattern_description": "P: chez",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "chez"
+    }
+  },
+  {
+    "pattern_description": "P: après",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "après"
+    }
+  },
+  {
+    "pattern_description": "P: dans",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "dans"
+    }
+  },
+  {
+    "pattern_description": "P: par",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "par"
+    }
+  },
+  {
+    "pattern_description": "P: sous",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "sous"
+    }
+  },
+  {
+    "pattern_description": "P: contre",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "contre"
+    }
+  },
+  {
+    "pattern_description": "PPS: Il",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "Il"
+    }
+  },
+  {
+    "pattern_description": "PPS: il",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "il"
+    }
+  },
+  {
+    "pattern_description": "PPS: elle",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "elle"
+    }
+  },
+  {
+    "pattern_description": "PPS: lui",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "lui"
+    }
+  },
+  {
+    "pattern_description": "PPS: je",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "je"
+    }
+  },
+  {
+    "pattern_description": "PPS: me",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "me"
+    }
+  },
+  {
+    "pattern_description": "PPS: on",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "on"
+    }
+  },
+  {
+    "pattern_description": "PPS: nous",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "nous"
+    }
+  },
+  {
+    "pattern_description": "PPS: vous",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "vous"
+    }
+  },
+  {
+    "pattern_description": "PPS: se",
+    "category": "SujV",
+    "pattern": {
+      "type": "lookup",
+      "value": "se"
+    }
+  },
+  {
+    "pattern_description": "CSub: quand",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "quand"
+    }
+  },
+  {
+    "pattern_description": "CSub: lorsque",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "lorsque"
+    }
+  },
+  {
+    "pattern_description": "CSub: comme",
+    "category": "CSub",
+    "pattern": {
+      "type": "lookup",
+      "value": "comme"
+    }
+  },
+  {
+    "pattern_description": "Adv: alors",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "alors"
+    }
+  },
+  {
+    "pattern_description": "Adv: finalement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "finalement"
+    }
+  },
+  {
+    "pattern_description": "Adv: complètement",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "complètement"
+    }
+  },
+  {
+    "pattern_description": "Adv: déjà",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "déjà"
+    }
+  },
+  {
+    "pattern_description": "Adv: bien",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "bien"
+    }
+  },
+  {
+    "pattern_description": "Adv: maintenant",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "maintenant"
+    }
+  },
+  {
+    "pattern_description": "Quote: \"",
+    "category": "Quote",
+    "pattern": {
+      "type": "lookup",
+      "value": "\""
+    }
+  },
+  {
+    "pattern_description": "Adv: vraiment",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "vraiment"
+    }
+  },
+  {
+    "pattern_description": "Adv: tout",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "tout"
+    }
+  },
+  {
+    "pattern_description": "Adv: même",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "même"
+    }
+  },
+  {
+    "pattern_description": "Adv: Enfin",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "Enfin"
+    }
+  },
+  {
+    "pattern_description": "Adv: ça",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lookup",
+      "value": "ça"
+    }
+  },
+  {
+    "pattern_description": "Pro: qui",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "qui"
+    }
+  },
+  {
+    "pattern_description": "Pro: qu'il",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "qu'il"
+    }
+  },
+  {
+    "pattern_description": "Pro: d'un",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'un"
+    }
+  },
+  {
+    "pattern_description": "Pro: c'est",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "c'est"
+    }
+  },
+  {
+    "pattern_description": "Pro: C'est",
+    "category": "Pro",
+    "pattern": {
+      "type": "lookup",
+      "value": "C'est"
+    }
+  },
+  {
+    "pattern_description": "P: sur",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "sur"
+    }
+  },
+  {
+    "pattern_description": "P: près",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "près"
+    }
+  },
+  {
+    "pattern_description": "P: puisqu'une",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "puisqu'une"
+    }
+  },
+  {
+    "pattern_description": "P: ou",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "ou"
+    }
+  },
+  {
+    "pattern_description": "P: avec",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "avec"
+    }
+  },
+  {
+    "pattern_description": "P: aux",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "aux"
+    }
+  },
+  {
+    "pattern_description": "P: du",
+    "category": "SP",
+    "pattern": {
+      "type": "lookup",
+      "value": "du"
+    }
+  },
+  {
+    "pattern_description": "Adj:d'occasion -> SAdj",
+    "category": "SAdj",
+    "pattern": {
+      "type": "lookup",
+      "value": "d'occasion"
+    }
+  },
+  {
+    "pattern_description": "SV + SN -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SV"
+        },
+        {
+          "type": "category",
+          "value": "SN"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "SV + SP -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "sequence",
+      "elements": [
+        {
+          "type": "category",
+          "value": "SV"
+        },
+        {
+          "type": "category",
+          "value": "SP"
+        }
+      ]
+    }
+  },
+  {
+    "pattern_description": "N -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "N"
+    }
+  },
+  {
+    "pattern_description": "N_Prop -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "N_Prop"
+    }
+  },
+  {
+    "pattern_description": "Adj -> SAdj",
+    "category": "SAdj",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Adj"
+    }
+  },
+  {
+    "pattern_description": "Adv -> SAdv",
+    "category": "SAdv",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Adv"
+    }
+  },
+  {
+    "pattern_description": "V -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "V"
+    }
+  },
+  {
+    "pattern_description": "Vinf -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Vinf"
+    }
+  },
+  {
+    "pattern_description": "Vpart -> SV",
+    "category": "SV",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Vpart"
+    }
+  },
+  {
+    "pattern_description": "Interj -> Interj",
+    "category": "Interj",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Interj"
+    }
+  },
+  {
+    "pattern_description": "ProS -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "ProS"
+    }
+  },
+  {
+    "pattern_description": "Num -> SN",
+    "category": "SN",
+    "pattern": {
+      "type": "lexicon_category",
+      "key": "Num"
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ":",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": ":"
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": "Quote_C:»",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "»"
+    }
+  },
+  {
+    "pattern_description": ":",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": ":"
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": "Quote_C:»",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "»"
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": ",",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": ".",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": "PctF: .",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "."
+    }
+  },
+  {
+    "pattern_description": "PctF: !",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": "!"
+    }
+  },
+  {
+    "pattern_description": "PctF: :",
+    "category": "PctF",
+    "pattern": {
+      "type": "lookup",
+      "value": ":"
+    }
+  },
+  {
+    "pattern_description": "PctNF: ,",
+    "category": "PctNF",
+    "pattern": {
+      "type": "lookup",
+      "value": ","
+    }
+  },
+  {
+    "pattern_description": "Quote: «",
+    "category": "Quote",
+    "pattern": {
+      "type": "lookup",
+      "value": "«"
+    }
+  },
+  {
+    "pattern_description": "Quote: »",
+    "category": "Quote",
+    "pattern": {
+      "type": "lookup",
+      "value": "»"
+    }
+  },
+  {
+    "pattern_description": "ParO: (",
+    "category": "ParO",
+    "pattern": {
+      "type": "lookup",
+      "value": "("
+    }
+  },
+  {
+    "pattern_description": "ParF: )",
+    "category": "ParF",
+    "pattern": {
+      "type": "lookup",
+      "value": ")"
+    }
+  }
+]
