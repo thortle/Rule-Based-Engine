@@ -1,7 +1,0 @@
-{
-  "comment": "Minimal French lexicon for rule-based chunker (legacy comparison only)",
-  "categories": {
-    "DET": ["le", "la", "les", "un", "une", "des", "ce", "cette", "ces", "son", "sa", "ses", "mon", "ma", "mes", "ton", "ta", "tes", "notre", "nos", "votre", "vos", "leur", "leurs"],
-    "PREP": ["à", "de", "en", "dans", "sur", "avec", "pour", "par", "vers", "sans", "chez", "contre", "depuis", "pendant", "après", "avant"]
-  }
-}
