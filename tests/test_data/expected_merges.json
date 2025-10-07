@@ -1,0 +1,157 @@
+{
+  "description": "Test fixtures for semantic rule validation",
+  "version": "1.0",
+  
+  "test_cases": {
+    "subject_verb": {
+      "description": "Test SujV + SV → SV merging",
+      "rule_id": "subject_verb",
+      "input_chunks": [
+        {
+          "category": "SujV",
+          "text": "Il",
+          "token_count": 1
+        },
+        {
+          "category": "SV",
+          "text": "est",
+          "token_count": 1
+        }
+      ],
+      "expected_output": [
+        {
+          "category": "SV",
+          "text": "Il est",
+          "token_count": 2
+        }
+      ],
+      "should_merge": true
+    },
+    
+    "temporal_merge": {
+      "description": "Test SN + SN → SN with both_temporal condition",
+      "rule_id": "temporal_merge",
+      "input_chunks": [
+        {
+          "category": "SN",
+          "text": "18 h 30",
+          "token_count": 3
+        },
+        {
+          "category": "SN",
+          "text": "ce lundi 27 janvier",
+          "token_count": 4
+        }
+      ],
+      "expected_output": [
+        {
+          "category": "SN",
+          "text": "18 h 30 ce lundi 27 janvier",
+          "token_count": 7
+        }
+      ],
+      "should_merge": true
+    },
+    
+    "temporal_merge_negative": {
+      "description": "Test SN + SN should NOT merge (not temporal)",
+      "rule_id": "temporal_merge",
+      "input_chunks": [
+        {
+          "category": "SN",
+          "text": "le docteur",
+          "token_count": 2
+        },
+        {
+          "category": "SN",
+          "text": "la maison",
+          "token_count": 2
+        }
+      ],
+      "expected_output": [
+        {
+          "category": "SN",
+          "text": "le docteur",
+          "token_count": 2
+        },
+        {
+          "category": "SN",
+          "text": "la maison",
+          "token_count": 2
+        }
+      ],
+      "should_merge": false
+    },
+    
+    "coordination_noun": {
+      "description": "Test SN + Coord + SN → SN merging",
+      "rule_id": "coordination_noun",
+      "input_chunks": [
+        {
+          "category": "SN",
+          "text": "le docteur Moulin",
+          "token_count": 3
+        },
+        {
+          "category": "Coord",
+          "text": "et",
+          "token_count": 1
+        },
+        {
+          "category": "SN",
+          "text": "son équipe",
+          "token_count": 2
+        }
+      ],
+      "expected_output": [
+        {
+          "category": "SN",
+          "text": "le docteur Moulin et son équipe",
+          "token_count": 6
+        }
+      ],
+      "should_merge": true
+    },
+    
+    "multi_pass_test": {
+      "description": "Test that requires multiple passes",
+      "passes_required": 3,
+      "input_chunks": [
+        {
+          "category": "SAdv",
+          "text": "finalement",
+          "token_count": 1
+        },
+        {
+          "category": "SV",
+          "text": "rentrer",
+          "token_count": 1
+        },
+        {
+          "category": "Pro_Obj",
+          "text": "chez lui",
+          "token_count": 2
+        }
+      ],
+      "expected_output": [
+        {
+          "category": "SV",
+          "text": "finalement rentrer chez lui",
+          "token_count": 4
+        }
+      ],
+      "merges": [
+        {
+          "pass": 1,
+          "rule": "adverb_verb",
+          "result": "finalement rentrer"
+        },
+        {
+          "pass": 2,
+          "rule": "verb_object_pronoun",
+          "result": "finalement rentrer chez lui"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "rule_id": "subject_verb",
+    "pattern": ["SujV", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge subject pronoun with verb (e.g., 'Il est' → one SV chunk)",
+    "examples": ["Il est", "je crois", "on peut"]
+  },
+  {
+    "rule_id": "subject_verb_with_neg",
+    "pattern": ["SujV", "SAdv", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge subject pronoun with negation and verb (e.g., 'il n'est pas')",
+    "examples": ["Ce n'est pas", "je n'ai pas"]
+  },
+  {
+    "rule_id": "preposition_noun",
+    "pattern": ["SP", "SN"],
+    "result_category": "SP",
+    "condition": "adjacent",
+    "description": "Complete prepositional phrase by merging preposition with noun (e.g., 'à Paris')",
+    "examples": ["à l'hôpital", "de retour", "en urgences"]
+  },
+  {
+    "rule_id": "adverb_verb",
+    "pattern": ["SAdv", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge adverb with verb (e.g., 'vraiment mis')",
+    "examples": ["vraiment mis", "complètement sous", "finalement rentrer"]
+  },
+  {
+    "rule_id": "verb_adverb",
+    "pattern": ["SV", "SAdv"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge verb with following adverb (e.g., 'finir bien')",
+    "examples": ["finit bien", "aller bien"]
+  },
+  {
+    "rule_id": "temporal_merge",
+    "pattern": ["SN", "SN"],
+    "result_category": "SN",
+    "condition": "both_temporal",
+    "description": "Merge temporal noun phrases (e.g., '18 h 30' + 'ce lundi 27 janvier')",
+    "examples": ["18 h 30 ce lundi", "2 jours de repos"]
+  },
+  {
+    "rule_id": "coordination_noun",
+    "pattern": ["SN", "Coord", "SN"],
+    "result_category": "SN",
+    "condition": "adjacent",
+    "description": "Merge coordinated noun phrases (e.g., 'le docteur et son équipe')",
+    "examples": ["le docteur et son équipe", "des compresses ou des gants"]
+  },
+  {
+    "rule_id": "subordinator_subject_verb",
+    "pattern": ["CSub", "SujV", "SV"],
+    "result_category": "CSub",
+    "condition": "adjacent",
+    "description": "Merge subordinating conjunction with subject and verb (e.g., 'quand il est')",
+    "examples": ["quand il est", "que je crois", "si on peut"]
+  },
+  {
+    "rule_id": "verb_verb_auxiliary",
+    "pattern": ["SV", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge auxiliary verb constructions (e.g., 'peut dire', 'a oublié')",
+    "examples": ["peut dire", "avait pris", "a oublié"]
+  },
+  {
+    "rule_id": "verb_preposition",
+    "pattern": ["SV", "SP"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge verb with prepositional complement (e.g., 'admis en')",
+    "examples": ["admis en", "retourner à", "porter plainte contre"]
+  },
+  {
+    "rule_id": "object_pronoun_verb",
+    "pattern": ["Pro_Obj", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge object pronoun with verb (e.g., 'se rappelle', 'me demander')",
+    "examples": ["se rappelle", "me demander", "nous confie"]
+  },
+  {
+    "rule_id": "verb_object_pronoun",
+    "pattern": ["SV", "Pro_Obj"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge verb with following object pronoun (e.g., 'laisser Jean-Noël')",
+    "examples": ["laisser Jean-Noël", "entendu la voix"]
+  },
+  {
+    "rule_id": "adjective_noun",
+    "pattern": ["SAdj", "SN"],
+    "result_category": "SN",
+    "condition": "adjacent",
+    "description": "Merge adjective with noun (e.g., 'graves faits')",
+    "examples": ["graves faits", "bénigne opération"]
+  },
+  {
+    "rule_id": "noun_adjective",
+    "pattern": ["SN", "SAdj"],
+    "result_category": "SN",
+    "condition": "adjacent",
+    "description": "Merge noun with following adjective (e.g., 'faits graves')",
+    "examples": ["faits graves", "opération bénigne"]
+  },
+  {
+    "rule_id": "coordination_verb",
+    "pattern": ["SV", "Coord", "SV"],
+    "result_category": "SV",
+    "condition": "adjacent",
+    "description": "Merge coordinated verbs (e.g., 'est bien et finit bien')",
+    "examples": ["est bien et finit bien"]
+  },
+  {
+    "rule_id": "verb_direct_object",
+    "pattern": ["SV", "SN"],
+    "result_category": "SV",
+    "condition": "adjacent_no_punctuation",
+    "description": "Merge verb with direct object noun phrase",
+    "examples": ["révèle l'impensable", "ressent de violentes contractions", "se rappelle Emma sa femme"]
+  },
+  {
+    "rule_id": "subordinate_clause_completion",
+    "pattern": ["CSub", "SN"],
+    "result_category": "CSub",
+    "condition": "adjacent",
+    "description": "Complete subordinate clauses by merging with object nouns",
+    "examples": ["qu'il avait pris 75 kilos", "quand Jean-Noël est admis"]
+  },
+  {
+    "rule_id": "prepositional_chain",
+    "pattern": ["SN", "SN"],
+    "result_category": "SN",
+    "condition": "both_have_preposition",
+    "description": "Merge consecutive prepositional phrases into a single noun phrase",
+    "examples": ["en urgences à l'hôpital", "pour une crise d'appendicite"]
+  },
+  {
+    "rule_id": "sentence_initial_adverbial",
+    "pattern": ["SN", "Pct", "SN", "SV"],
+    "result_category": "SV",
+    "condition": "first_is_adverbial_and_comma",
+    "description": "Merge sentence-initial adverbial phrase with main clause",
+    "examples": ["De retour aux urgences , les médecins sont", "en juin dernier , avait dû retourner"]
+  }
+]

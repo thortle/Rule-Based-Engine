@@ -1,0 +1,32 @@
+{
+  "description": "Configuration for UD-based French Text Chunker",
+  "version": "2.0",
+  
+  "pipeline": {
+    "enable_level1": true,
+    "enable_level2": true,
+    "description": "Toggle chunking levels on/off"
+  },
+  
+  "level2_semantic_merger": {
+    "rules_file": "lang_fr/semantic_rules.json",
+    "multi_pass": false,
+    "max_passes": 10,
+    "debug": false,
+    "description": "Configuration for semantic rule merging"
+  },
+  
+  "output": {
+    "format": "text",
+    "save_level1": true,
+    "save_level2": true,
+    "output_dir": "data/output",
+    "description": "Output format options: text, json, conllu"
+  },
+  
+  "performance": {
+    "show_statistics": true,
+    "show_timing": false,
+    "verbose": false
+  }
+}
