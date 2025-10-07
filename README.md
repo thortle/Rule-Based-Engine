@@ -16,6 +16,27 @@ A linguistically-principled French text chunker using **Universal Dependencies**
 
 ---
 
+## Project Structure
+
+```
+Rule-Based-Engine/
+├── main.py                    # Pipeline orchestration
+├── linguistic_chunker.py      # Level 1: UD-based chunking
+├── chunk_validator.py         # Level 1.5: Constituent validation (NEW)
+├── semantic_merger.py         # Level 2: Semantic merging
+├── test_validation.py         # Validation test script (NEW)
+├── config.json                # Configuration
+├── data/                      # Test corpus and outputs
+├── lang_fr/
+│   ├── semantic_rules.json    # 19 semantic merging rules
+│   └── validation_patterns.json  # French linguistic patterns (NEW)
+└── tests/
+    ├── test_conditions.py     # Condition tests (8 tests)
+    └── test_chunk_validator.py  # Validation tests (26 tests) (NEW)
+```
+
+---
+
 ## Overview
 
 This project implements a **three-level text chunking system** for French text processing:
@@ -163,9 +184,9 @@ Low scores for function words (coordinators, subordinators, punctuation) are **l
 
 | Category | Avg Score | Pass Rate | Interpretation |
 |----------|-----------|-----------|----------------|
-| SN (Noun phrases) | 0.911 | 100% | ⭐⭐⭐⭐⭐ Excellent constituents |
-| SujV (Subject pronouns) | 0.438 | 77% | ⭐⭐⭐ Good |
-| SV (Verb phrases) | 0.202 | 19% | ⭐ Needs improvement |
+| SN (Noun phrases) | 0.911 | 100% | Excellent constituents |
+| SujV (Subject pronouns) | 0.438 | 77% |  Good |
+| SV (Verb phrases) | 0.202 | 19% |  Needs improvement |
 | Coord/CSub/Pct | 0.01 | 100%* | *Structural markers (auto-pass) |
 
 **Overall:** 62.7% pass rate (168/268 chunks: 93 valid constituents + 75 structural markers)
@@ -191,27 +212,6 @@ python tests/test_chunk_validator.py
 ✓ [SN] Jean-Noël C. ValidationScore(agg=0.84, sub=0.85, coord=0.77, disl=0.70, cleft=0.95, frag=0.95)
 ✓ [SN] à l' hôpital Rangueil ValidationScore(agg=0.96, sub=1.00, coord=0.94, disl=0.90, cleft=0.95, frag=1.00)
 ✓ [Coord] et ValidationScore(agg=0.01, ...) [structural_marker]
-```
-
----
-
-## Project Structure
-
-```
-Rule-Based-Engine/
-├── main.py                    # Pipeline orchestration
-├── linguistic_chunker.py      # Level 1: UD-based chunking
-├── chunk_validator.py         # Level 1.5: Constituent validation (NEW)
-├── semantic_merger.py         # Level 2: Semantic merging
-├── test_validation.py         # Validation test script (NEW)
-├── config.json                # Configuration
-├── data/                      # Test corpus and outputs
-├── lang_fr/
-│   ├── semantic_rules.json    # 19 semantic merging rules
-│   └── validation_patterns.json  # French linguistic patterns (NEW)
-└── tests/
-    ├── test_conditions.py     # Condition tests (8 tests)
-    └── test_chunk_validator.py  # Validation tests (26 tests) (NEW)
 ```
 
 ---
@@ -269,7 +269,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## ✅ Summary
+## Summary
 
 This project demonstrates that combining **Universal Dependencies parsing**, **linguistic constituency validation**, and **semantic rule-based merging** provides superior text chunking with quality guarantees.
 
