@@ -8,15 +8,15 @@ A linguistically-principled French text chunker using **Universal Dependencies**
 
 ## Quick Links
 
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Architecture](#️-architecture)
-- [Performance](#-performance)
-- [How It Works](#-how-it-works)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Architecture](#architecture)
+- [Performance](#performance)
+- [How It Works](#how-it-works)
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This project implements a **two-level text chunking system** for French text processing:
 
@@ -46,7 +46,7 @@ Our solution combines **linguistic structure (UD)** with **semantic patterns (ru
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ```bash
 # Install Stanza
@@ -58,7 +58,7 @@ python -c "import stanza; stanza.download('fr')"
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Basic usage
@@ -74,7 +74,7 @@ cat data/output/gorafi_medical_level2.txt  # Semantic chunks
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The system uses a two-level pipeline:
 
@@ -85,7 +85,7 @@ The system uses a two-level pipeline:
 
 ---
 
-## �� Performance
+## Performance
 
 Test corpus: 15 sentences, 479 tokens from Le Gorafi
 
@@ -101,7 +101,7 @@ Test corpus: 15 sentences, 479 tokens from Le Gorafi
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Rule-Based-Engine/
@@ -116,7 +116,7 @@ Rule-Based-Engine/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 cd tests
@@ -127,7 +127,7 @@ All 8 unit tests pass, covering token-level condition checking, preposition dete
 
 ---
 
-## 🔬 Technical Details
+## Technical Details
 
 ### UD Relations Used
 - `det` (determiner), `amod` (adjective), `nummod` (numeric)
@@ -143,7 +143,7 @@ All 8 unit tests pass, covering token-level condition checking, preposition dete
 
 ---
 
-## 📖 References
+## References
 
 - [Universal Dependencies](https://universaldependencies.org/)
 - [Stanza Documentation](https://stanfordnlp.github.io/stanza/)
@@ -152,7 +152,7 @@ All 8 unit tests pass, covering token-level condition checking, preposition dete
 
 ---
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
