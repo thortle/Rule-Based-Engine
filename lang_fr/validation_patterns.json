@@ -1,0 +1,286 @@
+{
+  "description": "French linguistic patterns for constituency validation tests",
+  "language": "fr",
+  "version": "1.0",
+  
+  "pronouns": {
+    "subject": {
+      "singular": ["il", "elle", "on", "cela", "ça", "ce"],
+      "plural": ["ils", "elles"],
+      "description": "Subject pronouns for pronominal substitution of noun phrases"
+    },
+    "object_direct": {
+      "singular": ["le", "la", "l'"],
+      "plural": ["les"],
+      "description": "Direct object pronouns (accusative)"
+    },
+    "object_indirect": {
+      "singular": ["lui", "y", "en"],
+      "plural": ["leur"],
+      "description": "Indirect object and oblique pronouns (dative)"
+    },
+    "reflexive": {
+      "forms": ["me", "m'", "te", "t'", "se", "s'", "nous", "vous"],
+      "description": "Reflexive pronouns"
+    },
+    "locative": {
+      "forms": ["y"],
+      "prepositions": ["à", "dans", "sur", "sous", "chez", "vers", "en"],
+      "description": "Locative pronoun replacing prepositional phrases with location"
+    },
+    "partitive": {
+      "forms": ["en"],
+      "prepositions": ["de", "des", "du"],
+      "description": "Partitive pronoun replacing prepositional phrases with 'de'"
+    }
+  },
+  
+  "cleft_constructions": {
+    "patterns": [
+      {
+        "template": "c'est {CHUNK} que",
+        "regex": "^c'est\\s+(.+?)\\s+que",
+        "description": "Cleft with singular subject (c'est ... que)",
+        "compatible_categories": ["SN", "SP", "SAdj", "SAdv"]
+      },
+      {
+        "template": "c'est {CHUNK} qui",
+        "regex": "^c'est\\s+(.+?)\\s+qui",
+        "description": "Cleft with singular subject relative (c'est ... qui)",
+        "compatible_categories": ["SN", "SujV"]
+      },
+      {
+        "template": "ce sont {CHUNK} que",
+        "regex": "^ce\\s+sont\\s+(.+?)\\s+que",
+        "description": "Cleft with plural subject (ce sont ... que)",
+        "compatible_categories": ["SN"]
+      },
+      {
+        "template": "ce sont {CHUNK} qui",
+        "regex": "^ce\\s+sont\\s+(.+?)\\s+qui",
+        "description": "Cleft with plural subject relative (ce sont ... qui)",
+        "compatible_categories": ["SN", "SujV"]
+      }
+    ],
+    "incompatible_pos": ["AUX", "VERB", "PUNCT", "CCONJ", "SCONJ"],
+    "description": "Cleft sentence constructions for focus/emphasis"
+  },
+  
+  "question_words": {
+    "qui": {
+      "translation": "who",
+      "compatible_categories": ["SN", "SujV"],
+      "requires_animate": true,
+      "example": "Qui a rencontré une souris? → Le petit chat"
+    },
+    "que": {
+      "translation": "what",
+      "compatible_categories": ["SN", "SV"],
+      "requires_animate": false,
+      "example": "Que fait le chat? → Il chasse"
+    },
+    "quoi": {
+      "translation": "what",
+      "compatible_categories": ["SN"],
+      "requires_animate": false,
+      "example": "De quoi parles-tu? → Le livre"
+    },
+    "où": {
+      "translation": "where",
+      "compatible_categories": ["SP", "SAdv", "SN"],
+      "semantic_type": "location",
+      "example": "Où vas-tu? → À Paris"
+    },
+    "quand": {
+      "translation": "when",
+      "compatible_categories": ["SAdv", "SP", "SN"],
+      "semantic_type": "temporal",
+      "example": "Quand es-tu arrivé? → Hier soir"
+    },
+    "comment": {
+      "translation": "how",
+      "compatible_categories": ["SAdv", "SP"],
+      "semantic_type": "manner",
+      "example": "Comment y vas-tu? → En voiture"
+    },
+    "pourquoi": {
+      "translation": "why",
+      "compatible_categories": ["SP", "SAdv"],
+      "semantic_type": "reason",
+      "example": "Pourquoi pars-tu? → Pour travailler"
+    },
+    "combien": {
+      "translation": "how many/much",
+      "compatible_categories": ["SN", "SAdv"],
+      "semantic_type": "quantity",
+      "example": "Combien de livres? → Trois livres"
+    },
+    "quel": {
+      "translation": "which",
+      "compatible_categories": ["SN"],
+      "requires_determiner": true,
+      "forms": ["quel", "quelle", "quels", "quelles"],
+      "example": "Quel livre? → Le rouge"
+    },
+    "lequel": {
+      "translation": "which one",
+      "compatible_categories": ["SN"],
+      "forms": ["lequel", "laquelle", "lesquels", "lesquelles"],
+      "example": "Lequel préfères-tu? → Celui-ci"
+    }
+  },
+  
+  "coordination": {
+    "coordinators": {
+      "et": {
+        "translation": "and",
+        "semantic": "addition",
+        "example": "[le chat] et [la souris]"
+      },
+      "ou": {
+        "translation": "or",
+        "semantic": "alternative",
+        "example": "[le chat] ou [le chien]"
+      },
+      "mais": {
+        "translation": "but",
+        "semantic": "contrast",
+        "example": "[petit] mais [courageux]"
+      },
+      "ni": {
+        "translation": "neither/nor",
+        "semantic": "negative_coordination",
+        "example": "ni [le chat] ni [la souris]"
+      },
+      "or": {
+        "translation": "now/yet",
+        "semantic": "contrast",
+        "example": "[il étudie] or [il ne comprend pas]"
+      },
+      "car": {
+        "translation": "because/for",
+        "semantic": "reason",
+        "example": "[il part] car [il est fatigué]"
+      }
+    },
+    "requirements": {
+      "same_category": true,
+      "similar_structure": true,
+      "parallel_syntax": true,
+      "description": "Coordinated elements must have same syntactic category and similar internal structure"
+    }
+  },
+  
+  "dislocation": {
+    "left_dislocation": {
+      "template": "{CHUNK}, ... {PRONOUN} ...",
+      "description": "Topic moved to left with resumptive pronoun",
+      "examples": [
+        "Le petit chat, Kim le regarde",
+        "À Paris, j'y vais demain",
+        "De ce livre, j'en parle souvent"
+      ]
+    },
+    "right_dislocation": {
+      "template": "... {PRONOUN} ..., {CHUNK}",
+      "description": "Topic moved to right with anaphoric pronoun",
+      "examples": [
+        "Kim le regarde, le petit chat",
+        "J'y vais demain, à Paris"
+      ]
+    },
+    "resumptive_pronouns": {
+      "le": ["SN direct object, masculine singular"],
+      "la": ["SN direct object, feminine singular"],
+      "les": ["SN direct object, plural"],
+      "lui": ["SN indirect object, singular"],
+      "leur": ["SN indirect object, plural"],
+      "y": ["SP with à/dans/sur/chez"],
+      "en": ["SP with de/des/du, SN partitive"]
+    }
+  },
+  
+  "pos_categories": {
+    "content_words": ["NOUN", "PROPN", "VERB", "ADJ", "ADV", "NUM"],
+    "function_words": ["DET", "ADP", "CCONJ", "SCONJ", "AUX"],
+    "closed_class": ["PRON", "DET", "ADP", "CCONJ", "SCONJ", "PART"],
+    "description": "POS categories for identifying content-bearing vs functional elements"
+  },
+  
+  "syntactic_categories": {
+    "SN": {
+      "name": "Syntagme Nominal",
+      "description": "Noun phrase",
+      "substitution": ["il", "elle", "le", "la", "cela"],
+      "coordination": "high",
+      "cleft": "high",
+      "fragment": "high",
+      "dislocation": "high"
+    },
+    "SV": {
+      "name": "Syntagme Verbal",
+      "description": "Verb phrase",
+      "substitution": "complex",
+      "coordination": "medium",
+      "cleft": "low",
+      "fragment": "medium",
+      "dislocation": "low"
+    },
+    "SP": {
+      "name": "Syntagme Prépositionnel",
+      "description": "Prepositional phrase",
+      "substitution": ["y", "en"],
+      "coordination": "high",
+      "cleft": "medium",
+      "fragment": "high",
+      "dislocation": "high"
+    },
+    "SAdj": {
+      "name": "Syntagme Adjectival",
+      "description": "Adjective phrase",
+      "substitution": "low",
+      "coordination": "high",
+      "cleft": "medium",
+      "fragment": "medium",
+      "dislocation": "low"
+    },
+    "SAdv": {
+      "name": "Syntagme Adverbial",
+      "description": "Adverb phrase",
+      "substitution": "low",
+      "coordination": "medium",
+      "cleft": "medium",
+      "fragment": "high",
+      "dislocation": "medium"
+    },
+    "SujV": {
+      "name": "Sujet pronominal",
+      "description": "Subject pronoun (already a pronoun)",
+      "substitution": "n/a",
+      "coordination": "medium",
+      "cleft": "medium",
+      "fragment": "low",
+      "dislocation": "low"
+    }
+  },
+  
+  "validation_heuristics": {
+    "single_token_chunks": {
+      "penalty": 0.7,
+      "description": "Single-token chunks are less likely to be full constituents"
+    },
+    "function_word_only": {
+      "penalty": 0.3,
+      "description": "Chunks with only function words are not valid constituents"
+    },
+    "very_long_chunks": {
+      "threshold": 10,
+      "warning": "possible_split",
+      "description": "Chunks with >10 tokens might need splitting"
+    },
+    "mixed_categories": {
+      "warning": "inconsistent_structure",
+      "description": "Chunks with mixed syntactic roles might be problematic"
+    }
+  }
+}

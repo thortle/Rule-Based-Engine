@@ -34,6 +34,7 @@ from linguistic_chunker import (
     map_ud_to_chunk_category
 )
 from semantic_merger import merge_level1_to_level2
+from chunk_validator import ChunkValidator, ValidatedChunk
 
 
 # ============================================================================
@@ -70,7 +71,14 @@ def get_default_config() -> dict:
     return {
         "pipeline": {
             "enable_level1": True,
+            "enable_validation": False,
             "enable_level2": True
+        },
+        "validation": {
+            "min_score": 0.4,
+            "filter_low_scores": False,
+            "show_scores": True,
+            "show_statistics": True
         },
         "level2_semantic_merger": {
             "rules_file": "lang_fr/semantic_rules.json",
@@ -81,6 +89,7 @@ def get_default_config() -> dict:
         "output": {
             "format": "text",
             "save_level1": True,
+            "save_validation": False,
             "save_level2": True,
             "output_dir": "data/output"
         },
@@ -291,6 +300,9 @@ def main():
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     parser.add_argument('--multi-pass', action='store_true', help='Enable multi-pass merging')
     parser.add_argument('--max-passes', type=int, help='Maximum number of passes (default from config)')
+    parser.add_argument('--validate', action='store_true', help='Enable Level 1.5 constituent validation')
+    parser.add_argument('--min-score', type=float, help='Minimum validation score (default 0.4)')
+    parser.add_argument('--filter-low-scores', action='store_true', help='Filter out low-scoring chunks')
     args = parser.parse_args()
     
     # Load configuration
@@ -303,12 +315,22 @@ def main():
         config['level2_semantic_merger']['multi_pass'] = True
     if args.max_passes:
         config['level2_semantic_merger']['max_passes'] = args.max_passes
+    if args.validate:
+        config['pipeline']['enable_validation'] = True
+    if args.min_score:
+        config['validation']['min_score'] = args.min_score
+    if args.filter_low_scores:
+        config['validation']['filter_low_scores'] = True
     
     print_header("UD-BASED FRENCH TEXT CHUNKER", "=")
     print("\nDemonstrating Universal Dependencies-based chunking")
     print("Test: French satirical news article (479 tokens)")
     print("\nConfiguration:")
     print(f"  • Level 1 (UD): {'Enabled' if config['pipeline']['enable_level1'] else 'Disabled'}")
+    print(f"  • Level 1.5 (Validation): {'Enabled' if config['pipeline']['enable_validation'] else 'Disabled'}")
+    if config['pipeline']['enable_validation']:
+        print(f"    - Min score: {config['validation']['min_score']}")
+        print(f"    - Filter low scores: {'Yes' if config['validation']['filter_low_scores'] else 'No'}")
     print(f"  • Level 2 (Semantic): {'Enabled' if config['pipeline']['enable_level2'] else 'Disabled'}")
     print(f"  • Multi-pass: {'Yes' if config['level2_semantic_merger']['multi_pass'] else 'No'}")
     print(f"  • Debug mode: {'Yes' if config['level2_semantic_merger']['debug'] else 'No'}")
@@ -316,8 +338,13 @@ def main():
     print("  1. Text → Stanza/UDPipe → CoNLL-U file")
     print("  2. CoNLL-U → CONLLU-to-JSON → JSON format")
     print("  3. JSON → Extract Level 1 UD-based chunks")
-    print("  4. Level 1 → Apply Level 2 semantic merging")
-    print("  5. Format and save both Level 1 and Level 2 outputs")
+    if config['pipeline']['enable_validation']:
+        print("  4. Level 1 → Apply Level 1.5 constituent validation")
+        print("  5. Validated chunks → Apply Level 2 semantic merging")
+        print("  6. Format and save Level 1, validation, and Level 2 outputs")
+    else:
+        print("  4. Level 1 → Apply Level 2 semantic merging")
+        print("  5. Format and save both Level 1 and Level 2 outputs")
     
     # Get file paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -329,6 +356,7 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     
     output_file_level1 = os.path.join(output_dir, 'gorafi_medical_level1.txt')
+    output_file_validation = os.path.join(output_dir, 'gorafi_medical_validation.txt')
     output_file_level2 = os.path.join(output_dir, 'gorafi_medical_level2.txt')
     semantic_rules_file = os.path.join(script_dir, config['level2_semantic_merger']['rules_file'])
     
@@ -357,17 +385,76 @@ def main():
     level1_results = []
     for sentence in ud_sentences:
         chunks = extract_linguistic_chunks_v2(sentence)
-        level1_results.append((sentence.text, chunks))
+        level1_results.append((sentence, chunks))
     print("✓ Level 1 linguistic chunking complete")
+    
+    # Run Level 1.5: Constituent Validation (optional)
+    validation_results = []
+    if config['pipeline']['enable_validation']:
+        print("\n🔄 Step 3.5: Running Level 1.5 (constituent validation)...")
+        validator = ChunkValidator(lang='fr')
+        
+        for sentence, chunks in level1_results:
+            validated_chunks = validator.validate_all(chunks, sentence)
+            validation_results.append((sentence, validated_chunks))
+        
+        print("✓ Level 1.5 constituent validation complete")
+        
+        # Show validation statistics
+        if config['validation']['show_statistics']:
+            all_validated = [vc for _, vcs in validation_results for vc in vcs]
+            stats = validator.get_statistics(all_validated)
+            
+            print("\n📊 Validation Statistics:")
+            print(f"   Total chunks: {stats['total_chunks']}")
+            print(f"   Passed chunks: {stats['passed_chunks']} ({stats['pass_rate']*100:.1f}%)")
+            print(f"   Avg aggregate score: {stats['avg_aggregate']:.3f}")
+            print(f"   Score range: {stats['min_aggregate']:.3f} - {stats['max_aggregate']:.3f}")
+            print(f"   Avg substitution: {stats['avg_substitution']:.3f}")
+            print(f"   Avg coordination: {stats['avg_coordination']:.3f}")
+            print(f"   Avg dislocation: {stats['avg_dislocation']:.3f}")
+            print(f"   Avg cleft: {stats['avg_cleft']:.3f}")
+            print(f"   Avg fragment: {stats['avg_fragment']:.3f}")
+            
+            # Show low-confidence chunks
+            low_conf = validator.get_low_confidence_chunks(
+                all_validated, 
+                threshold=config['validation']['min_score']
+            )
+            if low_conf:
+                print(f"\n⚠️  Low-confidence chunks ({len(low_conf)}):")
+                for vc in low_conf[:5]:  # Show first 5
+                    print(f"      {vc}")
+                if len(low_conf) > 5:
+                    print(f"      ... and {len(low_conf) - 5} more")
+        
+        # Filter low-scoring chunks if requested
+        if config['validation']['filter_low_scores']:
+            print(f"\n🔍 Filtering chunks with score < {config['validation']['min_score']}...")
+            filtered_results = []
+            for sentence, validated_chunks in validation_results:
+                filtered = validator.filter_by_score(
+                    validated_chunks, 
+                    min_score=config['validation']['min_score']
+                )
+                # Extract original chunks from validated chunks
+                chunks = [vc.chunk for vc in filtered]
+                filtered_results.append((sentence, chunks))
+            
+            # Update level1_results for Level 2
+            level1_results = filtered_results
+            total_before = sum(len(vcs) for _, vcs in validation_results)
+            total_after = sum(len(cs) for _, cs in filtered_results)
+            print(f"✓ Filtered {total_before - total_after} low-scoring chunks")
     
     # Run Level 2: Semantic merger
     if not config['pipeline']['enable_level2']:
         print("\n⚠️  Level 2 disabled in configuration, skipping semantic merging...")
-        level2_results = level1_results  # Use Level 1 as fallback
+        level2_results = [(sent.text, chunks) for sent, chunks in level1_results]
     else:
         print("\n🔄 Step 4: Running Level 2 (semantic merger)...")
         level2_results = []
-        for sent_text, level1_chunks in level1_results:
+        for sentence, level1_chunks in level1_results:
             level2_chunks = merge_level1_to_level2(
                 level1_chunks, 
                 semantic_rules_file,
@@ -375,7 +462,7 @@ def main():
                 max_passes=config['level2_semantic_merger']['max_passes'],
                 debug=config['level2_semantic_merger']['debug']
             )
-            level2_results.append((sent_text, level2_chunks))
+            level2_results.append((sentence.text, level2_chunks))
         print("✓ Level 2 semantic merging complete")
     
     # Save Level 1 output
@@ -383,6 +470,17 @@ def main():
         print("\n🔄 Step 5: Saving Level 1 output to file...")
         sentence_count = save_chunked_output(output_file_level1, ud_sentences)
         print(f"✓ Saved {sentence_count} Level 1 sentences to: {output_file_level1}")
+    
+    # Save validation output
+    if config['pipeline']['enable_validation'] and config['output'].get('save_validation', False):
+        print("\n🔄 Step 5.5: Saving validation output to file...")
+        with open(output_file_validation, 'w', encoding='utf-8') as f:
+            for sentence, validated_chunks in validation_results:
+                f.write(f"=== {sentence.text} ===\n\n")
+                for vc in validated_chunks:
+                    f.write(f"{vc}\n")
+                f.write("\n")
+        print(f"✓ Saved validation results to: {output_file_validation}")
     
     # Save Level 2 output
     if config['output']['save_level2']:
@@ -405,10 +503,12 @@ def main():
     
     # Level 1 Statistics
     print("\n📊 LEVEL 1 (UD-Based) Statistics:")
-    level1_total = sum(len(chunks) for _, chunks in level1_results)
-    level1_tokens = sum(sum(len(c.tokens) for c in chunks) for _, chunks in level1_results)
-    level1_sv = sum(1 for _, chunks in level1_results for c in chunks if c.category == 'SV')
-    level1_sn = sum(1 for _, chunks in level1_results for c in chunks if c.category == 'SN')
+    # Extract chunks from level1_results (which now contains (sentence, chunks))
+    level1_chunks_list = [chunks for _, chunks in level1_results]
+    level1_total = sum(len(chunks) for chunks in level1_chunks_list)
+    level1_tokens = sum(sum(len(c.tokens) for c in chunks) for chunks in level1_chunks_list)
+    level1_sv = sum(1 for chunks in level1_chunks_list for c in chunks if c.category == 'SV')
+    level1_sn = sum(1 for chunks in level1_chunks_list for c in chunks if c.category == 'SN')
     
     print(f"   Total chunks: {level1_total}")
     print(f"   Total tokens: {level1_tokens}")
@@ -452,6 +552,16 @@ def main():
     
     print_header("SUMMARY", "=")
     
+    validation_info = ""
+    if config['pipeline']['enable_validation']:
+        validation_info = f"""
+LEVEL 1.5 (CONSTITUENT VALIDATION):
+• Five linguistic tests: substitution, coordination, dislocation, cleft, fragment
+• Aggregate scoring with configurable threshold
+• Low-confidence chunk identification
+• Optional filtering of invalid constituents
+"""
+    
     print(f"""
 ✅ TWO-LEVEL CHUNKING COMPLETE
 
@@ -459,7 +569,7 @@ LEVEL 1 (UD-BASED):
 • Syntactic phrase detection using dependency relations
 • Merge relations: det, amod, nummod, flat:name, aux, case, appos
 • Copula exclusion, proper name merging, apposition handling
-
+{validation_info}
 LEVEL 2 (SEMANTIC MERGER):
 • Subject-verb merging (SujV + SV → SV)
 • Prepositional phrase completion (SP + SN → SP)
@@ -473,7 +583,9 @@ RESULTS:
 • Improvement: {reduction_pct:.1f}% reduction, {tokens_improvement:.2f}x token density
 
 NEXT STEPS:
-• Phase C: Configuration system, rule validation, testing framework
+• Analyze validation scores and refine chunking rules
+• Integrate with downstream NLP tasks
+• Extend to other French corpora
 """)
     
     print_header("✅ PHASE B COMPLETE", "=")
