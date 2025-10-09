@@ -4,7 +4,7 @@
 [![Stanza](https://img.shields.io/badge/stanza-1.11.0-green.svg)](https://stanfordnlp.github.io/stanza/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A linguistically-principled French text chunker using **Universal Dependencies** parsing with semantic rule-based merging. Achieves **47% chunk reduction** while maintaining semantic coherence.
+A linguistically-principled French text chunker using **Universal Dependencies** parsing with semantic rule-based merging.
 
 ## Quick Links
 
@@ -22,17 +22,17 @@ A linguistically-principled French text chunker using **Universal Dependencies**
 Rule-Based-Engine/
 ├── main.py                    # Pipeline orchestration
 ├── linguistic_chunker.py      # Level 1: UD-based chunking
-├── chunk_validator.py         # Level 1.5: Constituent validation (NEW)
+├── chunk_validator.py         # Level 1.5: Constituent validation 
 ├── semantic_merger.py         # Level 2: Semantic merging
-├── test_validation.py         # Validation test script (NEW)
+├── test_validation.py         # Validation test script 
 ├── config.json                # Configuration
 ├── data/                      # Test corpus and outputs
 ├── lang_fr/
 │   ├── semantic_rules.json    # 19 semantic merging rules
-│   └── validation_patterns.json  # French linguistic patterns (NEW)
+│   └── validation_patterns.json  # French linguistic patterns 
 └── tests/
     ├── test_conditions.py     # Condition tests (8 tests)
-    └── test_chunk_validator.py  # Validation tests (26 tests) (NEW)
+    └── test_chunk_validator.py  # Validation tests (26 tests) 
 ```
 
 ---
@@ -46,7 +46,7 @@ This project implements a **three-level text chunking system** for French text p
 - Use dependency relations to identify phrase boundaries
 - Create linguistically-grounded syntactic chunks
 
-**Level 1.5 (Constituent Validation) - NEW:**
+**Level 1.5 (Constituent Validation):**
 - Apply five linguistic constituency tests to validate chunks
 - Score each chunk (0.0-1.0) based on linguistic principles
 - Identify and flag low-confidence chunks for review
@@ -61,8 +61,8 @@ This project implements a **three-level text chunking system** for French text p
 
 - 47% chunk reduction (268 → 142 chunks on test corpus)
 - 3.37 tokens/chunk (1.89x improvement in density)
-- **NEW:** Constituent validation with 5 linguistic tests
-- **NEW:** Quality scoring for all chunks (0.911 avg for noun phrases)
+- Constituent validation with 5 linguistic tests
+- Quality scoring for all chunks (0.911 avg for noun phrases)
 - 19 semantic rules with multi-pass merging capability
 - Linguistically grounded using Universal Dependencies framework
 - Modular architecture - each level is independently testable
