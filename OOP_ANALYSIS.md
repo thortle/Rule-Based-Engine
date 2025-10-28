@@ -27,14 +27,16 @@ This document provides a detailed analysis of how Object-Oriented Programming (O
 
 | Component | Before (Procedural) | After (OOP) | Change |
 |-----------|---------------------|-------------|--------|
-| **main.py** | 507 lines | 127 lines | -75% |
-| **Level 1 chunking** | ~300 lines (linguistic_chunker.py) | 225 lines (chunkers.py) | -25% |
-| **Level 2 merging** | ~624 lines (semantic_merger.py) | 398 lines (semantic_rules.py) | -36% |
-| **Data models** | Embedded in chunker files | 143 lines (models.py) | New module |
-| **Pipeline orchestration** | Embedded in main.py | 281 lines (pipeline.py) | New module |
-| **Total** | ~1500 lines in 3 files | ~1200 lines in 5 files | -20% |
+| **scripts/main.py** | 507 lines | 127 lines | -75% |
+| **Level 1 chunking** | ~300 lines (linguistic_chunker.py) | 225 lines (src/chunkers.py) | -25% |
+| **Level 2 merging** | ~624 lines (semantic_merger.py) | 398 lines (src/semantic_rules.py) | -36% |
+| **Data models** | Embedded in chunker files | 143 lines (src/models.py) | New module |
+| **Pipeline orchestration** | Embedded in main.py | 281 lines (src/pipeline.py) | New module |
+| **Total** | ~1500 lines in 3 files | ~1200 lines in 5 modules | -20% |
 
 **Insight**: OOP refactoring **reduced** total code while **improving** organization and clarity.
+
+**File Organization**: Clean project structure with `src/`, `scripts/`, and `config/` directories following Python best practices.
 
 ### 1.2 Testing Approach
 

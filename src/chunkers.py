@@ -13,7 +13,7 @@ Design Philosophy:
 
 from abc import ABC, abstractmethod
 from typing import List, Set, Dict
-from models import Token, Chunk, Sentence
+from .models import Token, Chunk, Sentence
 
 
 # ============================================================================

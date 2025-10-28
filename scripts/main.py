@@ -5,16 +5,21 @@ UD-Based French Text Chunker
 Main entry point for the two-level French text chunking system.
 
 Usage:
-    python main.py [--config config.json] [--debug] [--multi-pass]
+    python scripts/main.py [--config config/config.json] [--debug] [--multi-pass]
 """
 
 import os
+import sys
 import json
 import argparse
-from pipeline import ChunkerPipeline
+
+# Add parent directory to path to import from src/
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.pipeline import ChunkerPipeline
 
 
-def load_config(config_file: str = "config.json") -> dict:
+def load_config(config_file: str = "config/config.json") -> dict:
     """Load configuration from JSON file or return defaults."""
     try:
         with open(config_file, 'r', encoding='utf-8') as f:
@@ -50,7 +55,7 @@ def main():
     """Main entry point."""
     # Parse arguments
     parser = argparse.ArgumentParser(description='UD-Based French Text Chunker')
-    parser.add_argument('--config', default='config.json', help='Configuration file')
+    parser.add_argument('--config', default='config/config.json', help='Configuration file')
     parser.add_argument('--debug', action='store_true', help='Debug mode')
     parser.add_argument('--multi-pass', action='store_true', help='Multi-pass merging')
     parser.add_argument('--max-passes', type=int, help='Max passes (overrides config)')
@@ -71,17 +76,17 @@ def main():
     print(f"• Level 2 (Semantic): {'Enabled' if config['pipeline']['enable_level2'] else 'Disabled'}")
     print(f"• Multi-pass: {'Yes' if config['level2_semantic_merger']['multi_pass'] else 'No'}")
     
-    # Setup paths
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    text_file = os.path.join(script_dir, 'data', 'gorafi_medical.txt')
-    output_dir = os.path.join(script_dir, config['output']['output_dir'])
+    # Setup paths (project root is parent of scripts/)
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    text_file = os.path.join(project_root, 'data', 'gorafi_medical.txt')
+    output_dir = os.path.join(project_root, config['output']['output_dir'])
     os.makedirs(output_dir, exist_ok=True)
     
     # Run pipeline
-    print("\n🔄 Running chunking pipeline...")
+    print("\nRunning chunking pipeline...")
     pipeline = ChunkerPipeline(config)
     level1_results, level2_results = pipeline.run(text_file, output_dir)
-    print("✓ Pipeline complete")
+    print("Pipeline complete")
     
     # Display statistics
     print_header("TWO-LEVEL CHUNKING RESULTS")
@@ -101,12 +106,12 @@ def main():
     reduction_pct = (reduction / stats_l1['total_chunks'] * 100) if stats_l1['total_chunks'] > 0 else 0
     improvement = stats_l2['tokens_per_chunk'] / stats_l1['tokens_per_chunk'] if stats_l1['tokens_per_chunk'] > 0 else 0
     
-    print("\n📈 Improvement:")
+    print("\nImprovement:")
     print(f"   Chunk reduction: {reduction} ({reduction_pct:.1f}%)")
     print(f"   Tokens/chunk improvement: {improvement:.2f}x")
     
     # Sample output
-    print("\n📄 Sample Output (First 3 sentences - Level 2):\n")
+    print("\nSample Output (First 3 sentences - Level 2):\n")
     for i, (sent_text, chunks) in enumerate(level2_results[:3], 1):
         print_section(f"Sentence {i}")
         print(f"{sent_text}\n")

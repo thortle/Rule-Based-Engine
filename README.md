@@ -21,17 +21,22 @@ A linguistically-principled French text chunker using Universal Dependencies par
 
 ```
 Rule-Based-Engine/
-├── main.py                    # CLI entry point
-├── models.py                  # Data models: Token, Chunk, Sentence
-├── chunkers.py                # Chunker ABC + UDChunker implementation
-├── semantic_rules.py          # SemanticRule ABC + concrete rules + SemanticMerger
-├── pipeline.py                # ChunkerPipeline orchestration facade
-├── config.json                # Pipeline configuration
+├── src/                       # Core source code
+│   ├── __init__.py           # Package initialization
+│   ├── models.py             # Data models: Token, Chunk, Sentence
+│   ├── chunkers.py           # Chunker ABC + UDChunker implementation
+│   ├── semantic_rules.py     # SemanticRule ABC + concrete rules + SemanticMerger
+│   └── pipeline.py           # ChunkerPipeline orchestration facade
+├── scripts/
+│   └── main.py               # CLI entry point
+├── config/
+│   └── config.json           # Pipeline configuration
 ├── data/                      # Test corpus and outputs
+│   └── output/               # Generated output files
 ├── lang_fr/
-│   └── semantic_rules.json    # Semantic merging rules
+│   └── semantic_rules.json   # Semantic merging rules
 └── tests/
-    └── test_system.py         # System integration tests
+    └── test_system.py        # System integration tests
 ```
 
 ---
@@ -93,10 +98,13 @@ python -c "import stanza; stanza.download('fr')"
 
 ```bash
 # Basic usage
-python main.py
+python scripts/main.py
 
 # Multi-pass merging
-python main.py --multi-pass
+python scripts/main.py --multi-pass
+
+# Custom configuration
+python scripts/main.py --config config/config.json --multi-pass
 
 # View results
 cat data/output/gorafi_medical_level1.txt  # Syntactic chunks
@@ -131,11 +139,11 @@ Save formatted output (Level 1 & Level 2 files)
 
 ### Core Components
 
-- **models.py**: Data structures (Token, Chunk, Sentence)
-- **chunkers.py**: Chunker ABC and UDChunker implementation
-- **semantic_rules.py**: SemanticRule ABC, concrete rules, and SemanticMerger
-- **pipeline.py**: ChunkerPipeline facade orchestrating the workflow
-- **main.py**: CLI entry point with configuration handling
+- **src/models.py**: Data structures (Token, Chunk, Sentence)
+- **src/chunkers.py**: Chunker ABC and UDChunker implementation
+- **src/semantic_rules.py**: SemanticRule ABC, concrete rules, and SemanticMerger
+- **src/pipeline.py**: ChunkerPipeline facade orchestrating the workflow
+- **scripts/main.py**: CLI entry point with configuration handling
 
 ### Design Patterns
 

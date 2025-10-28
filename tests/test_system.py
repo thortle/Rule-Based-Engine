@@ -15,7 +15,7 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import ChunkerPipeline
+from src.pipeline import ChunkerPipeline
 
 
 def count_chunks(results):
@@ -54,10 +54,10 @@ def test_pipeline_level1_only():
     assert total_chunks == 268, \
         f"Expected 268 Level 1 chunks, got {total_chunks}"
     
-    print(f"✓ Level 1 chunking: {total_chunks} chunks")
-    print(f"✓ Sentences processed: {len(level1_results)}")
+    print(f"[OK] Level 1 chunking: {total_chunks} chunks")
+    print(f"[OK] Sentences processed: {len(level1_results)}")
     print("="*80)
-    print("PASSED ✓\n")
+    print("PASSED\n")
 
 
 def test_pipeline_level2_single_pass():
@@ -97,11 +97,11 @@ def test_pipeline_level2_single_pass():
     reduction = level1_chunks - level2_chunks
     reduction_pct = (reduction / level1_chunks) * 100
     
-    print(f"✓ Level 1: {level1_chunks} chunks")
-    print(f"✓ Level 2: {level2_chunks} chunks")
-    print(f"✓ Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
+    print(f"[OK] Level 1: {level1_chunks} chunks")
+    print(f"[OK] Level 2: {level2_chunks} chunks")
+    print(f"[OK] Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
     print("="*80)
-    print("PASSED ✓\n")
+    print("PASSED\n")
 
 
 def test_pipeline_level2_multi_pass():
@@ -146,12 +146,12 @@ def test_pipeline_level2_multi_pass():
     assert round(reduction_pct, 1) == 47.0, \
         f"Expected 47.0% reduction, got {reduction_pct:.1f}%"
     
-    print(f"✓ Level 1: {level1_chunks} chunks")
-    print(f"✓ Level 2: {level2_chunks} chunks")
-    print(f"✓ Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
-    print("\n🎯 BASELINE VERIFIED: 268→142 chunks (47% reduction)")
+    print(f"[OK] Level 1: {level1_chunks} chunks")
+    print(f"[OK] Level 2: {level2_chunks} chunks")
+    print(f"[OK] Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
+    print("\n[BASELINE VERIFIED] 268->142 chunks (47% reduction)")
     print("="*80)
-    print("PASSED ✓\n")
+    print("PASSED\n")
 
 
 def test_output_files():
@@ -193,10 +193,10 @@ def test_output_files():
     assert level1_size > 0, "Level 1 output file is empty"
     assert level2_size > 0, "Level 2 output file is empty"
     
-    print(f"✓ Level 1 output: {level1_file} ({level1_size} bytes)")
-    print(f"✓ Level 2 output: {level2_file} ({level2_size} bytes)")
+    print(f"[OK] Level 1 output: {level1_file} ({level1_size} bytes)")
+    print(f"[OK] Level 2 output: {level2_file} ({level2_size} bytes)")
     print("="*80)
-    print("PASSED ✓\n")
+    print("PASSED\n")
 
 
 def main():
@@ -236,14 +236,14 @@ def main():
     print("SUMMARY")
     print("="*80)
     print(f"Total tests: {len(tests)}")
-    print(f"Passed: {passed} ✓")
+    print(f"Passed: {passed}")
     print(f"Failed: {failed}")
     print("="*80)
     
     if failed == 0:
-        print("\n🎉 ALL TESTS PASSED! System is working correctly.")
+        print("\nALL TESTS PASSED! System is working correctly.")
     else:
-        print(f"\n❌ {failed} test(s) failed. Please review the errors above.")
+        print(f"\n{failed} test(s) failed. Please review the errors above.")
     
     return failed == 0
 

@@ -18,7 +18,7 @@ Design principle: Keep it simple!
 
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Set
-from models import Chunk
+from .models import Chunk
 
 
 # ============================================================================
@@ -335,7 +335,7 @@ class SemanticMerger:
             # Check convergence
             if merges_this_pass == 0:
                 if debug:
-                    print(f"✓ Convergence reached after {pass_count} pass(es)")
+                    print(f"Convergence reached after {pass_count} pass(es)")
                 break
             
             if not multi_pass:
@@ -346,7 +346,7 @@ class SemanticMerger:
                 break
         
         if not debug:
-            print(f"✓ Applied {total_merges} semantic merges in {pass_count} pass(es)")
+            print(f"Applied {total_merges} semantic merges in {pass_count} pass(es)")
         
         return result
 
