@@ -34,3 +34,7 @@ Thumbs.db
 
 # Stanza resources (optional - uncomment if you want to exclude)
 # stanza_resources/
+
+# Project context (development only)
+CONTEXT_HANDOFF.md
+REFACTORING.md
