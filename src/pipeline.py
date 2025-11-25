@@ -15,7 +15,7 @@ from typing import List, Tuple, Dict, Any
 
 from .models import Token, Sentence, Chunk
 from .chunkers import UDChunker
-from .semantic_rules import SemanticMerger, create_rules_from_json
+from .rules import SemanticMerger, create_rules_from_json
 
 
 class ChunkerPipeline:
