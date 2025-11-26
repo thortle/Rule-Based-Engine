@@ -1,8 +1,8 @@
 # Project Presentation – Rule-Based French Text Chunker
 
 ## Slide 1 – Title & Context
-- **Title:** Refactoring a Rule-Based French Text Chunker with OOP & SOLID
-- **Team Goal:** Take an older procedural system and reorganize it using
+- **Title:** Refactoring a Rule-Based Text Chunker with OOP & SOLID
+- **Goal:** Take an older procedural system and reorganize it using
   object-oriented design and SOLID principles **without losing performance**.
 - **Scope:**
   - Make the codebase more scalable
@@ -42,46 +42,26 @@ Level 2 (Semantic): 4 chunks
 [Il est] [18 h 30 ce lundi 27 janvier] [quand]
 [Jean-Noël C. est admis aux urgences]
 ```
-
 ---
 
-## Slide 3 – Why This Matters (Domain Motivation)
-- **Typical issues in rule-based NLP:**
-  - POS tagging errors propagate
-  - Proper names get split ("Jean-Noël C." → "Jean" + "Noël" + "C.")
-  - Temporal expressions split incorrectly ("18 h 30" → 3 chunks)
-  - Passive voice constructions break apart
-- **Our hybrid approach:**
-  1. UD parsing for robust grammatical structure (Level 1)
-  2. Semantic rules for meaningful units (Level 2)
-  3. Output: fewer, denser, more interpretable chunks
-
-**Talking points:**
-- Explain that the project is not "just refactoring"; it solves real
-  linguistic problems.
-- But our **course focus** is on how we reorganized the code.
-
----
-
-## Slide 4 – Why OOP & SOLID for This Project?
+## Slide 3 – What OOP & SOLID are bringing to the table?
 - **Main pain in the procedural version:**
   - One big orchestration file (`main.py` ~500 lines)
   - Monolithic `semantic_merger.py` (~600 lines) mixing rules, constants, and
     control flow
   - Hard to test in isolation, hard to add features safely
-- **Why OOP & SOLID help here:**
+- **Solution:**
   - **Encapsulation:** keep linguistic concepts and algorithms self-contained
   - **Inheritance & polymorphism:** share common interfaces
     (chunkers, rules) and plug in new behaviour
   - **SOLID:** reduce coupling, make extension predictable and safe
 
 **Talking points:**
-- Phrase it as: "We didn't change *what* the program does, we changed *how*
-  the responsibilities are distributed."
+- Phrase it as: "Basically, we changed *how* the responsibilities are distributed."
 
 ---
 
-## Slide 5 – Procedural Architecture: Before Refactoring
+## Slide 4 – Procedural Architecture: Before Refactoring
 - **Project layout (before):**
 ```text
 Rule-Based-Engine/
@@ -105,7 +85,7 @@ Total: ~1500 lines in 3 monolithic files
 
 ---
 
-## Slide 6 – OOP Architecture: After Refactoring (Big Picture)
+## Slide 5 – OOP Architecture: After Refactoring
 - **New layout (after):**
 ```text
 Rule-Based-Engine/
@@ -128,7 +108,7 @@ Rule-Based-Engine/
 - **Quantitative impact:**
   - Total code: ~1500 → ~1200 lines (−20%)
   - `main.py`: 507 → 127 lines (−75%)
-  - No core file over ~300 lines
+  - Not a single core file is over ~300 lines
 
 **Talking points:**
 - Highlight that now each module has **one clear responsibility**.
@@ -136,8 +116,8 @@ Rule-Based-Engine/
 
 ---
 
-## Slide 7 – Data Flow: Before vs After
-- **Before (procedural):**
+## Slide 6 – Data Flow: Before vs After
+- **Before:**
 ```text
 main.py (507 lines) – does everything
 Config → I/O → Parsing → Chunking → Merging → Output
@@ -146,7 +126,7 @@ linguistic_chunker.py – mixed classes and functions
 semantic_merger.py – 150-line if/elif chain for rules
 ```
 
-- **After (OOP):**
+- **After:**
 ```text
 scripts/main.py – simple entry point
 Args → Config → ChunkerPipeline.run() → Display
@@ -166,7 +146,7 @@ Then delegates to:
 
 ---
 
-## Slide 8 – Key OOP Concepts: Encapsulation (Token & Chunk)
+## Slide 7 – Key OOP Concepts: Encapsulation (Token & Chunk)
 - **Example 1 – `Token` (encapsulating UD annotation):**
 ```python
 @dataclass(frozen=True)
@@ -202,7 +182,7 @@ class Chunk:
 
 ---
 
-## Slide 9 – Inheritance: Chunker Hierarchy
+## Slide 8 – Inheritance: Chunker Hierarchy
 - **Parent class – `Chunker` (interface):**
 ```python
 class Chunker(ABC):
@@ -227,7 +207,7 @@ class UDChunker(Chunker):
 
 ---
 
-## Slide 10 – Inheritance: SemanticRule Hierarchy
+## Slide 9 – Inheritance: SemanticRule Hierarchy
 - **Parent class – `SemanticRule`:**
 ```python
 class SemanticRule(ABC):
@@ -260,7 +240,7 @@ class TemporalMergeRule(SemanticRule):
 
 ---
 
-## Slide 11 – Polymorphism: Using Chunker Abstraction
+## Slide 10 – Polymorphism: Using Chunker Abstraction
 - **Polymorphism in `ChunkerPipeline`:**
 ```python
 class ChunkerPipeline:
@@ -282,7 +262,7 @@ class ChunkerPipeline:
 
 ---
 
-## Slide 12 – Polymorphism: SemanticMerger and Rules
+## Slide 11 – Polymorphism: SemanticMerger and Rules
 - **Polymorphism in `SemanticMerger`:**
 ```python
 class SemanticMerger:
@@ -309,7 +289,7 @@ class SemanticMerger:
 
 ---
 
-## Slide 13 – SOLID: Single Responsibility Principle (SRP)
+## Slide 12 – SOLID: Single Responsibility Principle (SRP)
 - **Each class is responsible for one thing only:**
   - `Token` – store token data (`src/models.py`)
   - `Chunk` – store chunk data (`src/models.py`)
@@ -325,7 +305,7 @@ class SemanticMerger:
 
 ---
 
-## Slide 14 – SOLID: Open/Closed Principle (OCP)
+## Slide 13 – SOLID: Open/Closed Principle (OCP)
 - **Definition:** open for extension, closed for modification.
 
 - **Example 1 – Adding a new `Chunker`:**
@@ -353,7 +333,7 @@ class CRFChunker(Chunker):
 
 ---
 
-## Slide 15 – SOLID: Liskov Substitution Principle (LSP)
+## Slide 14 – SOLID: Liskov Substitution Principle (LSP)
 - **Definition:** subclasses must be usable wherever the parent is expected.
 
 - **Example – Processing with any `Chunker`:**
@@ -374,7 +354,7 @@ process_text(RuleBasedChunker())
 
 ---
 
-## Slide 16 – SOLID: Interface Segregation & Dependency Inversion
+## Slide 15 – SOLID: Interface Segregation & Dependency Inversion
 - **Interface Segregation Principle (ISP):**
   - `Chunker` has a **minimal interface**:
 ```python
@@ -397,7 +377,7 @@ class Chunker(ABC):
 
 ---
 
-## Slide 17 – File Architecture & Organization (Rules Module)
+## Slide 16 – File Architecture & Organization (Rules Module)
 - **Motivation:** `semantic_merger.py` was a single 624-line file:
   - Constants mixed with logic
   - All rule types in one place
@@ -421,7 +401,7 @@ src/rules/
 
 ---
 
-## Slide 18 – Separation of Code & Configuration
+## Slide 17 – Separation of Code & Configuration
 - **Code vs configuration:**
 ```text
 src/rules/        ← Python implementation (language-agnostic)
@@ -435,7 +415,7 @@ lang_en/          ← English configuration (future)
 
 ---
 
-## Slide 19 – Extensibility Demo: Adding a New Language
+## Slide 18 – Extensibility Demo: Adding a New Language
 - **Goal:** add English support *without changing Python code*.
 
 - **Steps:**
@@ -467,7 +447,7 @@ stanza.download('en')
 
 ---
 
-## Slide 20 – Performance & Testing (Guaranteeing Behaviour)
+## Slide 19 – Performance & Testing
 - **Performance results (same corpus before/after):**
   - Chunk reduction: 268 → 142 (−47% chunks, denser segments)
   - Density: 1.79 → 3.37 tokens/chunk (+88%)
@@ -484,7 +464,7 @@ stanza.download('en')
 
 ---
 
-## Slide 21 – Conclusion
+## Slide 20 – Conclusion
 - **What we started with:**
   - A procedural, monolithic but functional rule-based engine.
 - **What we achieved:**
