@@ -1,4 +1,4 @@
-# Rule-Based French Text Chunker
+# Rule-Based Text Chunker
 **A Two-Level Linguistic Chunking System Using Universal Dependencies and Semantic Rules**
 
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
