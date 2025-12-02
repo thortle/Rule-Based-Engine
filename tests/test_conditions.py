@@ -162,27 +162,27 @@ if __name__ == '__main__':
     print("Running condition checking tests...")
     
     test_chunk_has_preposition()
-    print("✓ test_chunk_has_preposition passed")
+    print("[OK] test_chunk_has_preposition passed")
     
     test_chunk_starts_with_preposition()
-    print("✓ test_chunk_starts_with_preposition passed")
+    print("[OK] test_chunk_starts_with_preposition passed")
     
     test_chunk_is_quantity()
-    print("✓ test_chunk_is_quantity passed")
+    print("[OK] test_chunk_is_quantity passed")
     
     test_chunk_starts_with_relative()
-    print("✓ test_chunk_starts_with_relative passed")
+    print("[OK] test_chunk_starts_with_relative passed")
     
     test_chunk_is_speech_verb()
-    print("✓ test_chunk_is_speech_verb passed")
+    print("[OK] test_chunk_is_speech_verb passed")
     
     test_chunk_is_comma()
-    print("✓ test_chunk_is_comma passed")
+    print("[OK] test_chunk_is_comma passed")
     
     test_is_temporal_chunk()
-    print("✓ test_is_temporal_chunk passed")
+    print("[OK] test_is_temporal_chunk passed")
     
     test_both_have_preposition()
-    print("✓ test_both_have_preposition passed")
+    print("[OK] test_both_have_preposition passed")
     
-    print("\n✅ All tests passed!")
+    print("\nAll tests passed!")

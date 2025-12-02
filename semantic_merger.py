@@ -110,10 +110,10 @@ def load_semantic_rules(rules_file: str) -> List[Dict[str, Any]]:
         
         return semantic_rules if semantic_rules else rules
     except FileNotFoundError:
-        print(f"⚠️  Rules file not found: {rules_file}")
+        print(f"[WARN] Rules file not found: {rules_file}")
         return []
     except json.JSONDecodeError:
-        print(f"⚠️  Invalid JSON in rules file: {rules_file}")
+        print(f"[WARN] Invalid JSON in rules file: {rules_file}")
         return []
 
 
@@ -378,7 +378,7 @@ def check_condition(chunks: List[Chunk], rule: Dict[str, Any], match_start: int)
         return first_has_prep and second_is_comma
     
     # Unknown condition - default to False for safety
-    print(f"⚠️  Unknown condition: {condition}")
+    print(f"[WARN] Unknown condition: {condition}")
     return False
 
 
@@ -429,7 +429,7 @@ def apply_semantic_rules(chunks: List[Chunk], rules: List[Dict[str, Any]],
         List of Level 2 Chunk objects (merged)
     """
     if not rules:
-        print("⚠️  No semantic rules loaded, returning Level 1 chunks unchanged")
+        print("[WARN] No semantic rules loaded, returning Level 1 chunks unchanged")
         return chunks
     
     # Work with a copy to avoid modifying original
@@ -497,18 +497,18 @@ def apply_semantic_rules(chunks: List[Chunk], rules: List[Dict[str, Any]],
         # Stop if no merges in this pass, or if single-pass mode, or max passes reached
         if merges_this_pass == 0:
             if debug:
-                print(f"✓ Convergence reached after {pass_count} pass(es)")
+                print(f"[OK] Convergence reached after {pass_count} pass(es)")
             break
         
         if not multi_pass:
             break
         
         if pass_count >= max_passes:
-            print(f"⚠️  Max passes ({max_passes}) reached, stopping")
+            print(f"[WARN] Max passes ({max_passes}) reached, stopping")
             break
     
     if not debug:
-        print(f"✓ Applied {total_merges} semantic merges in {pass_count} pass(es)")
+        print(f"[OK] Applied {total_merges} semantic merges in {pass_count} pass(es)")
     
     return result
 
@@ -533,21 +533,21 @@ def merge_level1_to_level2(level1_chunks: List[Chunk], rules_file: str,
     Returns:
         List of Level 2 (semantically merged) chunks
     """
-    print("\n🔄 Applying Level 2 semantic merging...")
+    print("\nApplying Level 2 semantic merging...")
     
     if debug:
-        print("🐛 Debug mode enabled")
+        print("Debug mode enabled")
     
     # Load rules
     rules = load_semantic_rules(rules_file)
     if not rules:
-        print("⚠️  No rules loaded, skipping semantic merging")
+        print("[WARN] No rules loaded, skipping semantic merging")
         return level1_chunks
     
-    print(f"✓ Loaded {len(rules)} semantic rules")
+    print(f"[OK] Loaded {len(rules)} semantic rules")
     
     if multi_pass:
-        print(f"✓ Multi-pass mode enabled (max {max_passes} passes)")
+        print(f"[OK] Multi-pass mode enabled (max {max_passes} passes)")
     
     # Apply rules
     level2_chunks = apply_semantic_rules(level1_chunks, rules, 
@@ -559,9 +559,9 @@ def merge_level1_to_level2(level1_chunks: List[Chunk], rules_file: str,
     reduction = len(level1_chunks) - len(level2_chunks)
     reduction_pct = (reduction / len(level1_chunks)) * 100 if level1_chunks else 0
     
-    print(f"✓ Level 1 chunks: {len(level1_chunks)}")
-    print(f"✓ Level 2 chunks: {len(level2_chunks)}")
-    print(f"✓ Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
+    print(f"[OK] Level 1 chunks: {len(level1_chunks)}")
+    print(f"[OK] Level 2 chunks: {len(level2_chunks)}")
+    print(f"[OK] Reduction: {reduction} chunks ({reduction_pct:.1f}%)")
     
     return level2_chunks
 

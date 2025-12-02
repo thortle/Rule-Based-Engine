@@ -1,200 +1,158 @@
-# UD-Based French Text Chunker
+# Rule-Based French Text Chunker (Procedural Version)
 
-[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
-[![Stanza](https://img.shields.io/badge/stanza-1.11.0-green.svg)](https://stanfordnlp.github.io/stanza/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+A French text chunker that uses Universal Dependencies parsing to segment text into syntactic phrases (chunks).
 
-A linguistically-principled French text chunker using Universal Dependencies parsing with semantic rule-based merging.
-
-## Quick Links
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Architecture](#architecture)
-- [Performance](#performance)
-- [How It Works](#how-it-works)
-
----
-
-## Project Structure
-
-```
-Rule-Based-Engine/
-├── main.py                    # Pipeline orchestration
-├── linguistic_chunker.py      # Level 1: UD-based chunking
-├── semantic_merger.py         # Level 2: Semantic merging
-├── config.json                # Configuration
-├── data/                      # Test corpus and outputs
-├── lang_fr/
-│   └── semantic_rules.json    # 19 semantic merging rules
-└── tests/
-    └── test_conditions.py     # Condition tests (8 tests)
-```
-
----
+> **Note**: This is the original procedural implementation. See the `main` branch for the refactored object-oriented version.
 
 ## Overview
 
-This project implements a two-level text chunking system for French text processing:
+The system implements a two-level chunking pipeline:
 
-**Level 1 (UD-Based Syntactic Chunking):**
-- Parse text with Stanza to extract Universal Dependencies structure
-- Use dependency relations to identify phrase boundaries
-- Create linguistically-grounded syntactic chunks
+1. **Level 1 (Linguistic)**: Extracts base chunks using UD dependency relations
+2. **Level 2 (Semantic)**: Merges related chunks using configurable rules
 
-**Level 2 (Semantic Merging):**
-- Apply pattern-matching rules to Level 1 chunks
-- Merge semantically-related chunks based on linguistic conditions
-- Produce cohesive, meaningful text units
+## Requirements
 
-### Key Features
-
-- 47% chunk reduction (268 to 142 chunks on test corpus)
-- 3.37 tokens/chunk (1.89x improvement in density)
-- 19 semantic rules with multi-pass merging capability
-- Linguistically grounded using Universal Dependencies framework
-- Modular architecture - each level is independently testable
-
-### Why Two Levels?
-
-Traditional rule-based chunking struggles with POS tagging errors, proper name fragmentation, split temporal expressions, and broken passive voice constructions.
-
-Our solution combines linguistic structure (UD) with semantic patterns (rules) for accurate POS tags, semantic coherence, and transparent results.
-
----
+- Python 3.13+
+- Stanza 1.11.0
 
 ## Installation
 
 ```bash
-# Install Stanza
+python -m venv venv
+source venv/bin/activate
 pip install stanza
 
 # Download French language model
 python -c "import stanza; stanza.download('fr')"
 ```
 
----
-
-## Quick Start
+## Usage
 
 ```bash
-# Basic usage
 python main.py
-
-# Multi-pass merging
+python main.py --debug
 python main.py --multi-pass
-
-# View results
-cat data/output/gorafi_medical_level1.txt  # Syntactic chunks
-cat data/output/gorafi_medical_level2.txt  # Semantic chunks
+python main.py --config config.json
 ```
 
----
-
-## Architecture
-
-The system uses a two-level pipeline:
-
-1. **Level 1:** Stanza Parser to CoNLL-U to UD-based syntactic chunks
-2. **Level 2:** Semantic rules to Pattern matching to Merged chunks
+## Project Structure
 
 ```
-Input Text
-    ↓
-Level 1: UD-Based Syntactic Chunking
-    - Stanza parser to CoNLL-U format
-    - Extract dependency relations
-    - Output: 268 fine-grained chunks
-    ↓
-Level 2: Semantic Merging
-    - Apply 19 pattern-matching rules
-    - Multi-pass merging
-    - Output: 142 semantically merged chunks
-    ↓
-Final Output
+main.py                 # Pipeline orchestration
+linguistic_chunker.py   # Level 1 chunking (UD-based)
+semantic_merger.py      # Level 2 merging (rule-based)
+config.json             # Configuration
+lang_fr/semantic_rules.json  # Merge rules
+tests/test_conditions.py     # Unit tests
 ```
 
-This project includes custom CoNLL-U parsing logic (inspired by the CONLLU-to-JSON utility) that extracts the HEAD field critical for dependency tree traversal.
+## How It Works
 
----
+### Level 1: UD-Based Chunking
+
+The first level parses text with Stanza to extract Universal Dependencies structure, then builds chunks by traversing the dependency tree:
+
+1. **Head identification**: Verbs, nouns, adverbs become chunk heads
+2. **Dependent merging**: Tokens are attached to their syntactic heads based on UD relations:
+   - `det`, `amod`, `nummod` attach to nouns
+   - `aux`, `cop` attach to verbs
+   - `flat:name` merges proper name components
+   - `case` creates prepositional phrases
+   - `appos` merges appositions
+
+### Level 2: Semantic Merging
+
+The second level applies pattern-matching rules to combine related chunks:
+
+- **Subject-Verb**: `[SN] il` + `[SV] est` becomes `[SV] il est`
+- **Prepositional phrases**: `[SP] de` + `[SN] la ville` becomes `[SP] de la ville`
+- **Temporal expressions**: `[SN] 18 h` + `[SN] 30` becomes `[SN] 18 h 30`
+- **Coordination**: `[SN] X` + `[Coord] et` + `[SN] Y` becomes `[SN] X et Y`
+
+Rules are applied iteratively in multi-pass mode until no more merges are possible.
 
 ## Performance
 
-Test corpus: 15 sentences, 479 tokens from Le Gorafi
+On test corpus (15 sentences, 479 tokens):
 
-| Metric | Level 1 | Level 2 | Improvement |
-|--------|---------|---------|-------------|
-| **Chunks** | 268 | 142 | -47% |
-| **Tokens/chunk** | 1.79 | 3.37 | +88% |
+| Metric | Level 1 | Level 2 |
+|--------|---------|---------|
+| Chunks | ~244 | ~157 |
+| Tokens/chunk | ~1.96 | ~3.05 |
 
-**Example improvement:**
-- Input: "Il est 18 h 30 ce lundi 27 janvier quand Jean-Noël C. est admis..."
-- Level 1: 11 fine-grained chunks
-- Level 2: 4 semantically merged chunks (63.6% reduction)
+Level 2 achieves roughly 35% chunk reduction and 1.5x improvement in token density. Results vary depending on text structure and rule configuration.
 
----
+## Features
 
-## Testing
+### Multi-Pass Merging
+
+By default, rules are applied in a single pass. With `--multi-pass`, the system iterates until convergence:
 
 ```bash
-# Run semantic merger tests
-cd tests
-python test_conditions.py  # 8 tests
+python main.py --multi-pass
 ```
 
-**Test Coverage:**
-- Level 2: 8/8 tests passing (condition functions)
+This handles cases where one merge enables another. For example:
+1. Pass 1: `[SAdv] finalement` + `[SV] rentrer` merges into `[SV] finalement rentrer`
+2. Pass 2: `[SV] finalement rentrer` + `[Pro_Obj] chez lui` merges into `[SV] finalement rentrer chez lui`
 
----
+A `max_passes` limit (default: 10) prevents infinite loops.
 
-## Technical Details
+### Conditional Rules
 
-### UD Relations Used
-- `det` (determiner), `amod` (adjective), `nummod` (numeric)
-- `flat:name` (proper names), `aux` (auxiliary verbs)
-- `case` (prepositions), `appos` (apposition)
+Merge rules can include conditions to prevent false positives. For example, the temporal merge rule only fires when both chunks contain temporal markers (numbers, day names, month names):
 
-### Semantic Rules
-19 rules including subject-verb merging, temporal merging, prepositional chains, verb-object merging, and subordinate clause completion.
+```json
+{
+  "rule_id": "temporal_merge",
+  "pattern": [{"category": "SN"}, {"category": "SN"}],
+  "condition": "both_temporal",
+  "result_category": "SN"
+}
+```
 
-### Dependencies
-- Python 3.13+
-- Stanza 1.11.0
+Available conditions include: `both_temporal`, `chunk_has_preposition`, `chunk_is_quantity`, `chunk_starts_with_relative`, `chunk_is_speech_verb`.
 
----
+### Debug Mode
 
-## References
+Use `--debug` to trace rule application:
 
-- [Universal Dependencies](https://universaldependencies.org/)
-- [Stanza Documentation](https://stanfordnlp.github.io/stanza/)
-- [CoNLL-U Format](https://universaldependencies.org/format.html)
-- Related: CONLLU-to-JSON utility (inspiration for parsing logic)
+```bash
+python main.py --debug
+```
 
----
+This prints each merge as it happens, showing which rule matched and the before/after state.
+
+### JSON-Configurable Rules
+
+All semantic rules are defined in `lang_fr/semantic_rules.json`. Each rule specifies:
+- `pattern`: Sequence of chunk categories to match
+- `result_category`: Category of the merged chunk
+- `condition` (optional): Function to validate the match
+- `priority`: Order of rule application
+
+## Configuration
+
+Edit `config.json` to control pipeline behavior:
+
+```json
+{
+  "pipeline": {
+    "enable_level1": true,
+    "enable_level2": true
+  },
+  "level2_semantic_merger": {
+    "multi_pass": false,
+    "debug": false
+  }
+}
+```
+
+## Current State
+
+The implementation works but the merge rules have not been extensively fine-tuned. Some edge cases may not be handled optimally.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-## Summary
-
-This project demonstrates that combining Universal Dependencies parsing and semantic rule-based merging provides superior text chunking.
-
-The two-level architecture:
-1. Level 1 (UD) - Linguistic accuracy via dependency parsing
-2. Level 2 (Semantic) - Semantic coherence via pattern matching
-
-**Key achievements:**
-- 47% chunk reduction (268 to 142 chunks)
-- 88% density improvement (1.79 to 3.37 tokens/chunk)
-- 8 unit tests passing
-- Transparent, interpretable, linguistically grounded
-
-**Use cases:**
-- Text preprocessing for NLP pipelines
-- Information extraction systems
-- Semantic search and retrieval
-- Machine translation preprocessing
-- Linguistic corpus analysis
+MIT

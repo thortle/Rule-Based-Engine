@@ -53,14 +53,14 @@ def load_config(config_file: str = "config.json") -> dict:
     try:
         with open(config_file, 'r', encoding='utf-8') as f:
             config = json.load(f)
-        print(f"✓ Loaded configuration from {config_file}")
+        print(f"[OK] Loaded configuration from {config_file}")
         return config
     except FileNotFoundError:
-        print(f"⚠️  Configuration file not found: {config_file}")
+        print(f"[WARN] Configuration file not found: {config_file}")
         print("Using default configuration")
         return get_default_config()
     except json.JSONDecodeError as e:
-        print(f"⚠️  Error parsing configuration file: {e}")
+        print(f"[WARN] Error parsing configuration file: {e}")
         print("Using default configuration")
         return get_default_config()
 
@@ -121,7 +121,7 @@ def parse_text_to_conllu(text, output_file):
     Returns:
         Path to generated CoNLL-U file
     """
-    print("🔄 Step 1: Parsing text with Stanza (UDPipe) → CoNLL-U format...")
+    print("Step 1: Parsing text with Stanza (UDPipe) -> CoNLL-U format...")
     nlp = stanza.Pipeline('fr', processors='tokenize,mwt,pos,lemma,depparse',
                          logging_level='ERROR')
     doc = nlp(text)
@@ -135,7 +135,7 @@ def parse_text_to_conllu(text, output_file):
                 f.write(line)
             f.write("\n")  # Blank line between sentences
     
-    print(f"✓ CoNLL-U file saved: {output_file}")
+    print(f"[OK] CoNLL-U file saved: {output_file}")
     return output_file
 
 
@@ -153,7 +153,7 @@ def conllu_to_json(conllu_file, json_output_file):
     Returns:
         List of UDSentence objects
     """
-    print("🔄 Step 2: Parsing CoNLL-U file and extracting dependency structure...")
+    print("Step 2: Parsing CoNLL-U file and extracting dependency structure...")
     
     # Parse CoNLL-U file directly to extract all fields including HEAD
     sentences_json = []
@@ -198,15 +198,15 @@ def conllu_to_json(conllu_file, json_output_file):
     if current_sentence:
         sentences_json.append(current_sentence)
     
-    print(f"✓ Parsed {len(sentences_json)} sentences with dependency structure")
+    print(f"[OK] Parsed {len(sentences_json)} sentences with dependency structure")
     
     # Save JSON file
     with open(json_output_file, 'w', encoding='utf-8') as f:
         json.dump(sentences_json, f, ensure_ascii=False, indent=2)
-    print(f"✓ JSON file saved with HEAD field: {json_output_file}")
+    print(f"[OK] JSON file saved with HEAD field: {json_output_file}")
     
     # Convert JSON format to UDSentence objects for chunking
-    print("🔄 Step 3: Converting JSON to UDSentence format...")
+    print("Step 3: Converting JSON to UDSentence format...")
     sentences = []
     for sent_idx, sent_json in enumerate(sentences_json, 1):
         tokens = []
@@ -230,7 +230,7 @@ def conllu_to_json(conllu_file, json_output_file):
         
         sentences.append(UDSentence(str(sent_idx), sent_text, tokens))
     
-    print(f"✓ Converted to UDSentence format")
+    print(f"[OK] Converted to UDSentence format")
     return sentences
 
 
@@ -269,7 +269,7 @@ def save_chunked_output(output_file, ud_sentences):
     output_dir = os.path.dirname(output_file)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir)
-        print(f"✓ Created output directory: {output_dir}")
+        print(f"[OK] Created output directory: {output_dir}")
     
     sentence_count = 0
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -333,39 +333,39 @@ def main():
     semantic_rules_file = os.path.join(script_dir, config['level2_semantic_merger']['rules_file'])
     
     # Load test text
-    print("\n📂 Loading test text...")
+    print("\nLoading test text...")
     with open(text_file, 'r', encoding='utf-8') as f:
         text = f.read().strip()
     
     # Parse text → CoNLL-U
-    print("\n🔄 Step 1: Parsing text to CoNLL-U format...")
+    print("\nStep 1: Parsing text to CoNLL-U format...")
     parse_text_to_conllu(text, conllu_file)
-    print(f"✓ Generated CoNLL-U file: {conllu_file}")
+    print(f"[OK] Generated CoNLL-U file: {conllu_file}")
     
     # CoNLL-U → JSON → UDSentence format
-    print("\n🔄 Step 2: Converting CoNLL-U to JSON and UDSentence objects...")
+    print("\nStep 2: Converting CoNLL-U to JSON and UDSentence objects...")
     ud_sentences = conllu_to_json(conllu_file, json_file)
-    print(f"✓ Generated JSON file: {json_file}")
-    print(f"✓ Loaded {len(ud_sentences)} sentences")
+    print(f"[OK] Generated JSON file: {json_file}")
+    print(f"[OK] Loaded {len(ud_sentences)} sentences")
     
     # Run Level 1: UD-based linguistic chunker
     if not config['pipeline']['enable_level1']:
-        print("\n⚠️  Level 1 disabled in configuration, skipping...")
+        print("\n[WARN] Level 1 disabled in configuration, skipping...")
         return
     
-    print("\n🔄 Step 3: Running Level 1 (UD-based) linguistic chunker...")
+    print("\nStep 3: Running Level 1 (UD-based) linguistic chunker...")
     level1_results = []
     for sentence in ud_sentences:
         chunks = extract_linguistic_chunks_v2(sentence)
         level1_results.append((sentence, chunks))
-    print("✓ Level 1 linguistic chunking complete")
+    print("[OK] Level 1 linguistic chunking complete")
     
     # Run Level 2: Semantic merger
     if not config['pipeline']['enable_level2']:
-        print("\n⚠️  Level 2 disabled in configuration, skipping semantic merging...")
+        print("\n[WARN] Level 2 disabled in configuration, skipping semantic merging...")
         level2_results = [(sent.text, chunks) for sent, chunks in level1_results]
     else:
-        print("\n🔄 Step 4: Running Level 2 (semantic merger)...")
+        print("\nStep 4: Running Level 2 (semantic merger)...")
         level2_results = []
         for sentence, level1_chunks in level1_results:
             level2_chunks = merge_level1_to_level2(
@@ -376,17 +376,17 @@ def main():
                 debug=config['level2_semantic_merger']['debug']
             )
             level2_results.append((sentence.text, level2_chunks))
-        print("✓ Level 2 semantic merging complete")
+        print("[OK] Level 2 semantic merging complete")
     
     # Save Level 1 output
     if config['output']['save_level1']:
-        print("\n🔄 Step 4: Saving Level 1 output to file...")
+        print("\nStep 4: Saving Level 1 output to file...")
         sentence_count = save_chunked_output(output_file_level1, ud_sentences)
-        print(f"✓ Saved {sentence_count} Level 1 sentences to: {output_file_level1}")
+        print(f"[OK] Saved {sentence_count} Level 1 sentences to: {output_file_level1}")
     
     # Save Level 2 output
     if config['output']['save_level2']:
-        print("\n🔄 Step 5: Saving Level 2 output to file...")
+        print("\nStep 5: Saving Level 2 output to file...")
         output_dir = os.path.dirname(output_file_level2)
         if output_dir and not os.path.exists(output_dir):
             os.makedirs(output_dir)
@@ -395,7 +395,7 @@ def main():
         for sent_text, chunks in level2_results:
             formatted = format_chunks_to_text(None, chunks)
             f.write(formatted + "\n\n")
-    print(f"✓ Saved {len(level2_results)} Level 2 sentences to: {output_file_level2}")
+    print(f"[OK] Saved {len(level2_results)} Level 2 sentences to: {output_file_level2}")
     
     # ========================================================================
     # DISPLAY RESULTS
@@ -404,7 +404,7 @@ def main():
     print_header("TWO-LEVEL CHUNKING RESULTS", "=")
     
     # Level 1 Statistics
-    print("\n📊 LEVEL 1 (UD-Based) Statistics:")
+    print("\nLEVEL 1 (UD-Based) Statistics:")
     # Extract chunks from level1_results (which now contains (sentence, chunks))
     level1_chunks_list = [chunks for _, chunks in level1_results]
     level1_total = sum(len(chunks) for chunks in level1_chunks_list)
@@ -419,7 +419,7 @@ def main():
     print(f"   [SN] noun chunks: {level1_sn}")
     
     # Level 2 Statistics
-    print("\n📊 LEVEL 2 (Semantic Merger) Statistics:")
+    print("\nLEVEL 2 (Semantic Merger) Statistics:")
     level2_total = sum(len(chunks) for _, chunks in level2_results)
     level2_tokens = sum(sum(len(c.tokens) for c in chunks) for _, chunks in level2_results)
     level2_sv = sum(1 for _, chunks in level2_results for c in chunks if c.category == 'SV')
@@ -436,11 +436,11 @@ def main():
     reduction_pct = (reduction / level1_total * 100) if level1_total > 0 else 0
     tokens_improvement = (level2_tokens/level2_total) / (level1_tokens/level1_total) if level1_total > 0 else 0
     
-    print("\n📈 Improvement (Level 1 → Level 2):")
+    print("\nImprovement (Level 1 -> Level 2):")
     print(f"   Chunk reduction: {reduction} ({reduction_pct:.1f}%)")
     print(f"   Tokens/chunk improvement: {tokens_improvement:.2f}x")
     
-    print("\n📄 Sample Output (First 3 sentences - Level 2):\n")
+    print("\nSample Output (First 3 sentences - Level 2):\n")
     
     for i, (sent_text, chunks) in enumerate(level2_results[:3], 1):
         print_section(f"Sentence {i}")
