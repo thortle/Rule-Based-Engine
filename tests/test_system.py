@@ -224,11 +224,11 @@ def main():
             test_func()
             passed += 1
         except AssertionError as e:
-            print(f"\n❌ FAILED: {test_func.__name__}")
+            print(f"\n FAILED: {test_func.__name__}")
             print(f"   Error: {e}\n")
             failed += 1
         except Exception as e:
-            print(f"\n❌ ERROR in {test_func.__name__}")
+            print(f"\n ERROR in {test_func.__name__}")
             print(f"   {type(e).__name__}: {e}\n")
             failed += 1
     
